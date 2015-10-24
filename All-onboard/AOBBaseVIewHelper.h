@@ -10,4 +10,6 @@
 
 @interface AOBBaseVIewHelper : NSObject
 
++ (void) setAlertWithOkButton:(NSString *)warningMessage andAlertDelegate:(id)sender andTag:(NSInteger)alertTag  andTitle:(NSString *)alertTitle;
+
 @end

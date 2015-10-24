@@ -114,6 +114,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Find my car"/>
+                                <connections>
+                                    <action selector="findMyCarClicked:" destination="JdM-PP-VY3" eventType="touchDown" id="iuX-n9-qEe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -196,26 +199,23 @@
             </objects>
             <point key="canvasLocation" x="1084" y="511"/>
         </scene>
-        <!--View Controller-->
+        <!--Youtube View Controller-->
         <scene sceneID="JOY-DT-CQB">
             <objects>
-                <viewController id="RFf-2z-AYZ" sceneMemberID="viewController">
+                <viewController id="RFf-2z-AYZ" customClass="AOBYoutubeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cX0-u7-BHB"/>
                         <viewControllerLayoutGuide type="bottom" id="8bY-cn-6eK"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="r7h-OC-AQd">
+                    <view key="view" contentMode="scaleToFill" id="r7h-OC-AQd" customClass="YTPlayerView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rtG-BO-pCl">
-                                <rect key="frame" x="20" y="20" width="560" height="279"/>
-                                <animations/>
-                            </imageView>
-                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="playerView" destination="r7h-OC-AQd" id="9hM-og-U3T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dbh-1k-sGP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

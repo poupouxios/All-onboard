@@ -7,11 +7,14 @@
 //
 
 #import "AOBSelectViewController.h"
+#import "AOBBeaconDetectionManager.h"
 
-@interface AOBSelectViewController ()
+@interface AOBSelectViewController () <AOBBeaconDetectionManagerDatasource,AOBBeaconDetectionManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet FUIButton *findMyCarButton;
 @property (weak, nonatomic) IBOutlet FUIButton *selectFromListButton;
+@property (nonatomic,strong) AOBBeaconDetectionManager *beaconDetectionManager;
+@property (nonatomic,strong) AOBCustomProgressHUD *progressHud;
 
 @end
 
@@ -20,6 +23,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self styleButtons];
+    self.beaconDetectionManager = [[AOBBeaconDetectionManager alloc] init];
+    self.beaconDetectionManager.delegate = self;
+    self.beaconDetectionManager.datasource = self;
+    self.beaconDetectionManager.typeOfScan = ABOBeaconNonFilterScan;
     // Do any additional setup after loading the view.
 }
 
@@ -37,6 +44,53 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Beacon Delegate
+
+- (void)aboBeaconDetectionManagerDelegateBluetoothIsOff{
+    [AOBBaseVIewHelper setAlertWithOkButton:@"Warning" andAlertDelegate:self andTag:1 andTitle:kBluetoothIsOff];
+}
+
+- (void)aboBeaconDetectionManagerDelegateClosestBeaconFound:(NSNumber *)beaconMajor{
+    [LSCLoggingWrapper outputMessage:[NSString stringWithFormat:@"closest beacon is %@",beaconMajor]];
+}
+
+- (void)aboBeaconDetectionManagerDelegateDidFailToAccess:(NSString *)failedMessage andTitleMessage:(NSString *)titleMessage{
+    [AOBBaseVIewHelper setAlertWithOkButton:titleMessage andAlertDelegate:self andTag:1 andTitle:failedMessage];
+}
+
+- (void)aboBeaconDetectionManagerdelegateNoBeaconsDetected{
+    
+}
+
+- (void)aboBeaconDetectionManagerDelegateShakeDetected{
+    
+}
+
+- (void)aboBeaconDetectionManagerDelegateStartDetectingBeacons{
+    
+}
+
+#pragma mark - Beacon Datasource
+
+- (NSArray *)getListOfBeaconsToSearch{
+    NSArray *cars = [AOBCarMapper findAll];
+    NSMutableArray *beacons = [[NSMutableArray alloc] init];
+    for (Car *entityCar in cars) {
+        if(entityCar.beacon_major && entityCar.beacon_major.integerValue > 0){
+            [beacons addObject:entityCar.beacon_major];
+        }
+    }
+    return beacons;
+}
+
+- (NSString *)getUniqueName{
+    return @"allonboard";
+}
+
+- (NSUUID *)getUUID{
+    NSUUID *beaconUUID = [[NSUUID alloc] initWithUUIDString:kBeaconUUID];
+    return beaconUUID;
+}
 /*
 #pragma mark - Navigation
 
@@ -46,5 +100,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)findMyCarClicked:(id)sender {
+    [self.beaconDetectionManager startSearchingForBeacons];
+    self.progressHud = [[AOBCustomProgressHUD alloc] initWithView:self.view andMessage:kBeaconStartDetection andHudMode:MBProgressHUDModeIndeterminate andDisplayButton:NO];
+    [self.progressHud show:YES];
+}
 
 @end

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7D03735F0A452438CA831C2A'
+               BlueprintIdentifier = 'DF5D86FB8AC90B1B5CC8D583'
                BlueprintName = 'iOS7-TableTopSeparator'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libiOS7-TableTopSeparator.a'>

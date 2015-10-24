@@ -49,7 +49,6 @@
         cell = [[UITableViewCell alloc]
                 initWithStyle:UITableViewCellStyleDefault
                 reuseIdentifier:identifier];
-        //[cell applyColorForCells:YES andSecondaryColour:kFontColour];
     }
     
     Car *entityCar = [self.cars objectAtIndex:indexPath.row];
@@ -61,16 +60,8 @@
     return cell;
 }
 
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //[self performSegueWithIdentifier:@"carDetails" sender:self];
 }
-*/
 
 @end

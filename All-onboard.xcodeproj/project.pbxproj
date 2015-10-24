@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C0853AE1BDBE92F00F957FE /* AOBYoutubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0853AD1BDBE92F00F957FE /* AOBYoutubeViewController.m */; };
+		3C0853B21BDBEF4800F957FE /* AOBBeaconDetectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0853B11BDBEF4800F957FE /* AOBBeaconDetectionManager.m */; };
+		3C0853B51BDBF56400F957FE /* AOBBeaconWordingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0853B41BDBF56400F957FE /* AOBBeaconWordingConstants.m */; };
+		3C0853B81BDC023300F957FE /* AOBCustomProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0853B71BDC023300F957FE /* AOBCustomProgressHUD.m */; };
+		3C0853BA1BDC048100F957FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0853B91BDC048100F957FE /* Foundation.framework */; };
+		3C0853BC1BDC04A400F957FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0853BB1BDC04A400F957FE /* UIKit.framework */; };
+		3C0853BE1BDC04AF00F957FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0853BD1BDC04AF00F957FE /* CoreGraphics.framework */; };
 		3C560D2D1BDBAAF3003C397B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D2C1BDBAAF3003C397B /* main.m */; };
 		3C560D301BDBAAF3003C397B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D2F1BDBAAF3003C397B /* AppDelegate.m */; };
 		3C560D361BDBAAF3003C397B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C560D341BDBAAF3003C397B /* Main.storyboard */; };
@@ -65,6 +72,17 @@
 
 /* Begin PBXFileReference section */
 		16D6259472FA8793EDD922FB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C0853AC1BDBE92F00F957FE /* AOBYoutubeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOBYoutubeViewController.h; sourceTree = "<group>"; };
+		3C0853AD1BDBE92F00F957FE /* AOBYoutubeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOBYoutubeViewController.m; sourceTree = "<group>"; };
+		3C0853B01BDBEF4800F957FE /* AOBBeaconDetectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOBBeaconDetectionManager.h; path = Beacons/AOBBeaconDetectionManager.h; sourceTree = "<group>"; };
+		3C0853B11BDBEF4800F957FE /* AOBBeaconDetectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOBBeaconDetectionManager.m; path = Beacons/AOBBeaconDetectionManager.m; sourceTree = "<group>"; };
+		3C0853B31BDBF56400F957FE /* AOBBeaconWordingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOBBeaconWordingConstants.h; path = Beacons/AOBBeaconWordingConstants.h; sourceTree = "<group>"; };
+		3C0853B41BDBF56400F957FE /* AOBBeaconWordingConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOBBeaconWordingConstants.m; path = Beacons/AOBBeaconWordingConstants.m; sourceTree = "<group>"; };
+		3C0853B61BDC023300F957FE /* AOBCustomProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOBCustomProgressHUD.h; sourceTree = "<group>"; };
+		3C0853B71BDC023300F957FE /* AOBCustomProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOBCustomProgressHUD.m; sourceTree = "<group>"; };
+		3C0853B91BDC048100F957FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3C0853BB1BDC04A400F957FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3C0853BD1BDC04AF00F957FE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3C560D281BDBAAF3003C397B /* All-onboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "All-onboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C560D2C1BDBAAF3003C397B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C560D2E1BDBAAF3003C397B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -147,6 +165,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C0853BE1BDC04AF00F957FE /* CoreGraphics.framework in Frameworks */,
+				3C0853BC1BDC04A400F957FE /* UIKit.framework in Frameworks */,
+				3C0853BA1BDC048100F957FE /* Foundation.framework in Frameworks */,
 				84A36440AF2CE63570350E16 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +189,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C0853AF1BDBEF3900F957FE /* Beacons */ = {
+			isa = PBXGroup;
+			children = (
+				3C0853B31BDBF56400F957FE /* AOBBeaconWordingConstants.h */,
+				3C0853B41BDBF56400F957FE /* AOBBeaconWordingConstants.m */,
+				3C0853B01BDBEF4800F957FE /* AOBBeaconDetectionManager.h */,
+				3C0853B11BDBEF4800F957FE /* AOBBeaconDetectionManager.m */,
+			);
+			name = Beacons;
+			sourceTree = "<group>";
+		};
 		3C560D1F1BDBAAF3003C397B = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +226,7 @@
 		3C560D2A1BDBAAF3003C397B /* All-onboard */ = {
 			isa = PBXGroup;
 			children = (
+				3C0853AF1BDBEF3900F957FE /* Beacons */,
 				3C560DCD1BDBCBFA003C397B /* API */,
 				3C560DC31BDBC87F003C397B /* Mappers */,
 				3C560DB91BDBC68B003C397B /* MagicalRecordModels */,
@@ -208,8 +241,6 @@
 				3C560D371BDBAAF3003C397B /* Assets.xcassets */,
 				3C560D3C1BDBAAF3003C397B /* Info.plist */,
 				3C560D2B1BDBAAF3003C397B /* Supporting Files */,
-				3C560D7D1BDBBF68003C397B /* AOBBaseVIewHelper.h */,
-				3C560D7E1BDBBF68003C397B /* AOBBaseVIewHelper.m */,
 			);
 			path = "All-onboard";
 			sourceTree = "<group>";
@@ -250,6 +281,8 @@
 				3C560D6C1BDBB779003C397B /* AOBSelectViewController.m */,
 				3C560D6E1BDBB792003C397B /* AOBCarDetailsTableViewController.h */,
 				3C560D6F1BDBB792003C397B /* AOBCarDetailsTableViewController.m */,
+				3C0853AC1BDBE92F00F957FE /* AOBYoutubeViewController.h */,
+				3C0853AD1BDBE92F00F957FE /* AOBYoutubeViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -299,6 +332,10 @@
 		3C560D821BDBC347003C397B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3C0853B61BDC023300F957FE /* AOBCustomProgressHUD.h */,
+				3C0853B71BDC023300F957FE /* AOBCustomProgressHUD.m */,
+				3C560D7D1BDBBF68003C397B /* AOBBaseVIewHelper.h */,
+				3C560D7E1BDBBF68003C397B /* AOBBaseVIewHelper.m */,
 				3C560D831BDBC359003C397B /* LSCConnectivityManager.h */,
 				3C560D841BDBC359003C397B /* LSCDeviceDetails.h */,
 				3C560D851BDBC359003C397B /* LSCLoggingWrapper.h */,
@@ -348,6 +385,9 @@
 		8DC7C6A89B4CF3CE6F1CBB29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C0853BD1BDC04AF00F957FE /* CoreGraphics.framework */,
+				3C0853BB1BDC04A400F957FE /* UIKit.framework */,
+				3C0853B91BDC048100F957FE /* Foundation.framework */,
 				16D6259472FA8793EDD922FB /* libPods.a */,
 			);
 			name = Frameworks;
@@ -432,6 +472,7 @@
 				TargetAttributes = {
 					3C560D271BDBAAF3003C397B = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4WVL9R3GXY;
 					};
 					3C560D401BDBAAF3003C397B = {
 						CreatedOnToolsVersion = 7.1;
@@ -543,6 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C0853B81BDC023300F957FE /* AOBCustomProgressHUD.m in Sources */,
 				3C560D7C1BDBBDA0003C397B /* AOBConfig.m in Sources */,
 				3C560DBC1BDBC6B2003C397B /* All-onboard.xcdatamodeld in Sources */,
 				3C560DB81BDBC362003C397B /* UIView+LSCUIViewAdditions.m in Sources */,
@@ -562,15 +604,18 @@
 				3C560DCC1BDBC97A003C397B /* AOBCarMapper.m in Sources */,
 				3C560D301BDBAAF3003C397B /* AppDelegate.m in Sources */,
 				3C560DB21BDBC362003C397B /* UIImage+LLMImageAdditions.m in Sources */,
+				3C0853AE1BDBE92F00F957FE /* AOBYoutubeViewController.m in Sources */,
 				3C560D7F1BDBBF68003C397B /* AOBBaseVIewHelper.m in Sources */,
 				3C560DC21BDBC874003C397B /* Car.m in Sources */,
 				3C560DD01BDBCC0B003C397B /* AOBApiHandler.m in Sources */,
+				3C0853B51BDBF56400F957FE /* AOBBeaconWordingConstants.m in Sources */,
 				3C560DAC1BDBC362003C397B /* FUIAlertView+CustomStyle.m in Sources */,
 				3C560D2D1BDBAAF3003C397B /* main.m in Sources */,
 				3C560D8D1BDBC359003C397B /* LSCConnectivityManager.m in Sources */,
 				3C560DB71BDBC362003C397B /* UITableViewCell+LLMTableCellAdditions.m in Sources */,
 				3C560DB01BDBC362003C397B /* NSURL+LSCURLAdditions.m in Sources */,
 				3C560DAD1BDBC362003C397B /* FUIButton+LSCButtonStyle.m in Sources */,
+				3C0853B21BDBEF4800F957FE /* AOBBeaconDetectionManager.m in Sources */,
 				3C560D8F1BDBC359003C397B /* LSCLoggingWrapper.m in Sources */,
 				3C560DB11BDBC362003C397B /* UIColor+LSCColorAdditions.m in Sources */,
 				3C560D8E1BDBC359003C397B /* LSCDeviceDetails.m in Sources */,
@@ -707,9 +752,11 @@
 			baseConfigurationReference = B0158FB06591A72FEFDF8F9B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/All-onboard/All-onboard.pch";
 				INFOPLIST_FILE = "All-onboard/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.llamadigital.co.uk.All-onboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -721,9 +768,11 @@
 			baseConfigurationReference = A7C422A67A00A086385A3940 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/All-onboard/All-onboard.pch";
 				INFOPLIST_FILE = "All-onboard/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.llamadigital.co.uk.All-onboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";

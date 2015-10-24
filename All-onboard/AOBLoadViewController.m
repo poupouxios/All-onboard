@@ -33,7 +33,13 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self.apiHandler getAllCarData];
+    NSArray *cars = [AOBCarMapper findAll];
+    if(cars.count == 0){
+        [self.apiHandler getAllCarData];
+    }else{
+        self.progressBar.progress = 1.0f;
+        [self performSegueWithIdentifier:@"firstScreen" sender:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

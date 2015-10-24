@@ -13,9 +13,14 @@
 
 @implementation Car (CoreDataProperties)
 
-@dynamic carId;
 @dynamic beacon_major;
+@dynamic carId;
 @dynamic carMake;
 @dynamic carModel;
+@dynamic carDescription;
+@dynamic fuel_type;
+@dynamic layout;
+@dynamic intro_video_id;
+@dynamic gearing;
 
 @end

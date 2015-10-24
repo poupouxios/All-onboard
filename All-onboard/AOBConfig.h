@@ -15,5 +15,11 @@ extern NSString * const kButtonBackgroundColor;
 extern NSString * const kFontColour;
 extern NSString * const kBorderColour;
 extern NSString * const kApiUrl;
+extern NSInteger  const kFlickerDelay;
+extern NSInteger  const kTimesDiscovered;
+extern float const kAccelerationThreshold;
+extern NSString * const kBluetoothIsOff;
+extern NSString * const kBeaconUUID;
+extern NSString * const kBeaconStartDetection;
 
 @end

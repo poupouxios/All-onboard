@@ -15,5 +15,11 @@ NSString * const kButtonBackgroundColor = @"#ffffff";
 NSString * const kFontColour = @"#0494d1";
 NSString * const kBorderColour = @"#6b6c6e";
 NSString * const kApiUrl = @"http://192.168.225.29:4000/api/";
+NSInteger  const kFlickerDelay = 1;
+NSInteger const kTimesDiscovered = 3;
+float  const kAccelerationThreshold = 1.80;
+NSString * const kBluetoothIsOff = @"Bluetooth is off";
+NSString * const kBeaconUUID = @"BBBBBBBB-BBBB-BBBB-BBBB-BBBBBBBBBBBB";
+NSString * const kBeaconStartDetection = @"Finding nearest car..";
 
 @end
