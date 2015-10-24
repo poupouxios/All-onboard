@@ -16,14 +16,15 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Car (CoreDataProperties)
 
 @property (nullable, nonatomic, retain) NSNumber *beacon_major;
+@property (nullable, nonatomic, retain) NSString *carDescription;
 @property (nullable, nonatomic, retain) NSNumber *carId;
 @property (nullable, nonatomic, retain) NSString *carMake;
 @property (nullable, nonatomic, retain) NSString *carModel;
-@property (nullable, nonatomic, retain) NSString *carDescription;
 @property (nullable, nonatomic, retain) NSString *fuel_type;
-@property (nullable, nonatomic, retain) NSString *layout;
-@property (nullable, nonatomic, retain) NSString *intro_video_id;
 @property (nullable, nonatomic, retain) NSString *gearing;
+@property (nullable, nonatomic, retain) NSString *intro_video_id;
+@property (nullable, nonatomic, retain) NSString *layout;
+@property (nullable, nonatomic, retain) NSManagedObject *carImage;
 
 @end
 

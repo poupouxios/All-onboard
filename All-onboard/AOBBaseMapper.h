@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Car.h"
+#import "ImageEnt.h"
 
 @interface AOBBaseMapper : NSObject
 

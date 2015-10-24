@@ -12,7 +12,7 @@
 
 + (void) setAlertWithOkButton:(NSString *)warningMessage andAlertDelegate:(id)sender andTag:(NSInteger)alertTag  andTitle:(NSString *)alertTitle{
     FUIAlertView *av = [[FUIAlertView alloc] initWithTitle:alertTitle message:warningMessage delegate:sender cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [av applyFlatDesignForUIAlert:kBackgroundColor andBackgroundColour:kBackgroundColor andSecondaryColour:kBorderColour andFontColour:kFontColour];
+    [av applyFlatDesignForUIAlert:kBackgroundColor andBackgroundColour:kBorderColour andSecondaryColour:kButtonBackgroundColor andFontColour:kFontColour];
     av.tag = alertTag;
     [av show];
 }

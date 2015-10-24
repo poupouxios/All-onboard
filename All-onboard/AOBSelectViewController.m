@@ -8,6 +8,7 @@
 
 #import "AOBSelectViewController.h"
 #import "AOBBeaconDetectionManager.h"
+#import "AOBCarDetailsViewController.h"
 
 @interface AOBSelectViewController () <AOBBeaconDetectionManagerDatasource,AOBBeaconDetectionManagerDelegate>
 
@@ -15,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet FUIButton *selectFromListButton;
 @property (nonatomic,strong) AOBBeaconDetectionManager *beaconDetectionManager;
 @property (nonatomic,strong) AOBCustomProgressHUD *progressHud;
+@property (nonatomic,strong) NSNumber *beaconMajor;
 
 @end
 
@@ -48,14 +50,20 @@
 
 - (void)aboBeaconDetectionManagerDelegateBluetoothIsOff{
     [AOBBaseVIewHelper setAlertWithOkButton:@"Warning" andAlertDelegate:self andTag:1 andTitle:kBluetoothIsOff];
+    [self.progressHud hide:YES];
 }
 
 - (void)aboBeaconDetectionManagerDelegateClosestBeaconFound:(NSNumber *)beaconMajor{
+    self.beaconMajor = beaconMajor;
+    [self.beaconDetectionManager stopSearchingForBeacons];
     [LSCLoggingWrapper outputMessage:[NSString stringWithFormat:@"closest beacon is %@",beaconMajor]];
+    [self.progressHud hide:YES];
+    [self performSegueWithIdentifier:@"carBeaconDetected" sender:self];
 }
 
 - (void)aboBeaconDetectionManagerDelegateDidFailToAccess:(NSString *)failedMessage andTitleMessage:(NSString *)titleMessage{
     [AOBBaseVIewHelper setAlertWithOkButton:titleMessage andAlertDelegate:self andTag:1 andTitle:failedMessage];
+    [self.progressHud hide:YES];
 }
 
 - (void)aboBeaconDetectionManagerdelegateNoBeaconsDetected{
@@ -105,6 +113,19 @@
     [self.beaconDetectionManager startSearchingForBeacons];
     self.progressHud = [[AOBCustomProgressHUD alloc] initWithView:self.view andMessage:kBeaconStartDetection andHudMode:MBProgressHUDModeIndeterminate andDisplayButton:NO];
     [self.progressHud show:YES];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"carBeaconDetected"]){
+        AOBCarDetailsViewController *carDetailsVC = [segue destinationViewController];
+        NSArray *cars = [AOBCarMapper findAll];
+        for (Car *entityCar in cars) {
+            if([entityCar.beacon_major isEqualToNumber:self.beaconMajor]){
+                carDetailsVC.carDetails = entityCar;
+                break;
+            }
+        }
+    }
 }
 
 @end

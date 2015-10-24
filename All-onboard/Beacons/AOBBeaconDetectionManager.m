@@ -127,6 +127,7 @@
     }else{
         NSMutableArray *filteredBeacons = [[NSMutableArray alloc] init];
         for (CLBeacon *entityBeacon in beaconDetected) {
+            [LSCLoggingWrapper outputMessage:[NSString stringWithFormat:@"beacon found = %@",entityBeacon.major]];
             if([self.listOfBeaconToSearchOnly containsObject:entityBeacon.major]){
                 [filteredBeacons addObject:entityBeacon];
             }
@@ -347,8 +348,11 @@
 - (void) findClosestBeacon:(NSArray *)finalBeacons{
     NSInteger minimumRSSI = -200;
     NSNumber *closestBeacon = @0;
+    if(finalBeacons.count == 0){
+        return;
+    }
     for (CLBeacon *entityBeacon  in finalBeacons) {
-        if(entityBeacon.rssi < minimumRSSI){
+        if(entityBeacon.rssi > minimumRSSI){
             minimumRSSI = entityBeacon.rssi;
             closestBeacon = entityBeacon.major;
         }

@@ -8,7 +8,9 @@
 
 #import "AOBYoutubeViewController.h"
 
-@interface AOBYoutubeViewController ()
+@interface AOBYoutubeViewController () <YTPlayerViewDelegate>
+
+@property (nonatomic,strong) AOBCustomProgressHUD *progressHud;
 
 @end
 
@@ -16,13 +18,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.playerView loadWithVideoId:@"M7lc1UVf-VE"];
+    self.playerView.delegate = self;
+    [self.playerView loadWithVideoId:self.youtubeId];
+    self.progressHud = [[AOBCustomProgressHUD alloc] initWithView:self.view andMessage:kLoadingYoutubeVideo andHudMode:MBProgressHUDModeIndeterminate andDisplayButton:NO];
+    [self.progressHud show:YES];
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)playerViewDidBecomeReady:(YTPlayerView *)playerView{
+    [self.playerView playVideo];
+    [self.progressHud hide:YES];
 }
 
 /*

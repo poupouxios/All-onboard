@@ -21,5 +21,7 @@ extern float const kAccelerationThreshold;
 extern NSString * const kBluetoothIsOff;
 extern NSString * const kBeaconUUID;
 extern NSString * const kBeaconStartDetection;
+extern NSString * const kNoYoutubeLinkAvailable;
+extern NSString * const kLoadingYoutubeVideo;
 
 @end

@@ -52,6 +52,8 @@
         entityCar = [Car MR_createInContext:moc];
         [self creatingModel:entityCar andProperties:properties];
         [moc MR_saveToPersistentStoreAndWait];
+    }else{
+        [self updateRecord:properties];
     }
     return entityCar;
 }
@@ -81,7 +83,7 @@
     entity.carId = [properties objectForKey:@"id"];
     entity.carMake = [AOBBaseMapper getValueOfField:[properties objectForKey:@"make"] andAssigningField:entity.carMake];
     entity.carModel= [AOBBaseMapper getValueOfField:[properties objectForKey:@"model"] andAssigningField:entity.carModel];
-    entity.beacon_major = [AOBBaseMapper convertStringToNumber:[properties objectForKey:@"beacon_major"]];
+    entity.beacon_major = [AOBBaseMapper getValueOfField:[properties objectForKey:@"beacon_major"] andAssigningField:entity.beacon_major];
     entity.intro_video_id = [AOBBaseMapper getValueOfField:[properties objectForKey:@"intro_video_id"] andAssigningField:entity.intro_video_id];
     entity.carDescription = [AOBBaseMapper getValueOfField:[properties objectForKey:@"description"] andAssigningField:entity.carDescription];
     entity.layout = [AOBBaseMapper getValueOfField:[properties objectForKey:@"layout"] andAssigningField:entity.layout];

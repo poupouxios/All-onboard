@@ -33,13 +33,7 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    NSArray *cars = [AOBCarMapper findAll];
-    if(cars.count == 0){
-        [self.apiHandler getAllCarData];
-    }else{
-        self.progressBar.progress = 1.0f;
-        [self performSegueWithIdentifier:@"firstScreen" sender:self];
-    }
+    [self.apiHandler getAllCarData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,7 +56,11 @@
 }
 
 - (void)aobAPIHandlerDidFailUpdate:(NSString *)failedMessage{
-    
+    [AOBBaseVIewHelper setAlertWithOkButton:@"Error" andAlertDelegate:self andTag:1 andTitle:failedMessage];
+    NSArray *cars = [AOBCarMapper findAll];
+    if(cars.count > 0){
+        [self performSegueWithIdentifier:@"firstScreen" sender:self];
+    }
 }
 
 

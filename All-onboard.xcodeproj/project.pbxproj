@@ -14,6 +14,11 @@
 		3C0853BA1BDC048100F957FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0853B91BDC048100F957FE /* Foundation.framework */; };
 		3C0853BC1BDC04A400F957FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0853BB1BDC04A400F957FE /* UIKit.framework */; };
 		3C0853BE1BDC04AF00F957FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0853BD1BDC04AF00F957FE /* CoreGraphics.framework */; };
+		3C0853C11BDC0A7A00F957FE /* AOBCarDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0853C01BDC0A7A00F957FE /* AOBCarDetailsViewController.m */; };
+		3C0853C61BDC1F0300F957FE /* fiatAbarth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C0853C51BDC1F0300F957FE /* fiatAbarth.jpg */; };
+		3C0853CB1BDC2A4500F957FE /* ImageEnt+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0853C81BDC2A4500F957FE /* ImageEnt+CoreDataProperties.m */; };
+		3C0853CC1BDC2A4500F957FE /* ImageEnt.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0853CA1BDC2A4500F957FE /* ImageEnt.m */; };
+		3C0853CF1BDC2AC800F957FE /* AOBImageEntityMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0853CE1BDC2AC800F957FE /* AOBImageEntityMapper.m */; };
 		3C560D2D1BDBAAF3003C397B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D2C1BDBAAF3003C397B /* main.m */; };
 		3C560D301BDBAAF3003C397B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D2F1BDBAAF3003C397B /* AppDelegate.m */; };
 		3C560D361BDBAAF3003C397B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C560D341BDBAAF3003C397B /* Main.storyboard */; };
@@ -22,7 +27,7 @@
 		3C560D511BDBAAF3003C397B /* All_onboardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D501BDBAAF3003C397B /* All_onboardUITests.m */; };
 		3C560D6A1BDBB769003C397B /* AOBLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D691BDBB769003C397B /* AOBLoadViewController.m */; };
 		3C560D6D1BDBB779003C397B /* AOBSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D6C1BDBB779003C397B /* AOBSelectViewController.m */; };
-		3C560D701BDBB792003C397B /* AOBCarDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D6F1BDBB792003C397B /* AOBCarDetailsTableViewController.m */; };
+		3C560D701BDBB792003C397B /* AOBCarsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D6F1BDBB792003C397B /* AOBCarsTableViewController.m */; };
 		3C560D721BDBB977003C397B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C560D711BDBB977003C397B /* Default-568h@2x.png */; };
 		3C560D7C1BDBBDA0003C397B /* AOBConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D7B1BDBBDA0003C397B /* AOBConfig.m */; };
 		3C560D7F1BDBBF68003C397B /* AOBBaseVIewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D7E1BDBBF68003C397B /* AOBBaseVIewHelper.m */; };
@@ -83,6 +88,15 @@
 		3C0853B91BDC048100F957FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3C0853BB1BDC04A400F957FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3C0853BD1BDC04AF00F957FE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3C0853BF1BDC0A7A00F957FE /* AOBCarDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOBCarDetailsViewController.h; sourceTree = "<group>"; };
+		3C0853C01BDC0A7A00F957FE /* AOBCarDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOBCarDetailsViewController.m; sourceTree = "<group>"; };
+		3C0853C51BDC1F0300F957FE /* fiatAbarth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fiatAbarth.jpg; path = "../../../all-onboard images/fiatAbarth.jpg"; sourceTree = "<group>"; };
+		3C0853C71BDC2A4500F957FE /* ImageEnt+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImageEnt+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3C0853C81BDC2A4500F957FE /* ImageEnt+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ImageEnt+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3C0853C91BDC2A4500F957FE /* ImageEnt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageEnt.h; sourceTree = "<group>"; };
+		3C0853CA1BDC2A4500F957FE /* ImageEnt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageEnt.m; sourceTree = "<group>"; };
+		3C0853CD1BDC2AC800F957FE /* AOBImageEntityMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOBImageEntityMapper.h; sourceTree = "<group>"; };
+		3C0853CE1BDC2AC800F957FE /* AOBImageEntityMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOBImageEntityMapper.m; sourceTree = "<group>"; };
 		3C560D281BDBAAF3003C397B /* All-onboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "All-onboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C560D2C1BDBAAF3003C397B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C560D2E1BDBAAF3003C397B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,8 +114,8 @@
 		3C560D691BDBB769003C397B /* AOBLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOBLoadViewController.m; sourceTree = "<group>"; };
 		3C560D6B1BDBB779003C397B /* AOBSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOBSelectViewController.h; sourceTree = "<group>"; };
 		3C560D6C1BDBB779003C397B /* AOBSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOBSelectViewController.m; sourceTree = "<group>"; };
-		3C560D6E1BDBB792003C397B /* AOBCarDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOBCarDetailsTableViewController.h; sourceTree = "<group>"; };
-		3C560D6F1BDBB792003C397B /* AOBCarDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOBCarDetailsTableViewController.m; sourceTree = "<group>"; };
+		3C560D6E1BDBB792003C397B /* AOBCarsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOBCarsTableViewController.h; sourceTree = "<group>"; };
+		3C560D6F1BDBB792003C397B /* AOBCarsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOBCarsTableViewController.m; sourceTree = "<group>"; };
 		3C560D711BDBB977003C397B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3C560D771BDBBD2C003C397B /* LSCGeneralHelpersCoreLibraries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCGeneralHelpersCoreLibraries.h; sourceTree = "<group>"; };
 		3C560D781BDBBD6C003C397B /* All-onboard.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "All-onboard.pch"; sourceTree = "<group>"; };
@@ -200,6 +214,14 @@
 			name = Beacons;
 			sourceTree = "<group>";
 		};
+		3C0853C21BDC132F00F957FE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3C0853C51BDC1F0300F957FE /* fiatAbarth.jpg */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		3C560D1F1BDBAAF3003C397B = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +248,7 @@
 		3C560D2A1BDBAAF3003C397B /* All-onboard */ = {
 			isa = PBXGroup;
 			children = (
+				3C0853C21BDC132F00F957FE /* Assets */,
 				3C0853AF1BDBEF3900F957FE /* Beacons */,
 				3C560DCD1BDBCBFA003C397B /* API */,
 				3C560DC31BDBC87F003C397B /* Mappers */,
@@ -279,10 +302,12 @@
 				3C560D691BDBB769003C397B /* AOBLoadViewController.m */,
 				3C560D6B1BDBB779003C397B /* AOBSelectViewController.h */,
 				3C560D6C1BDBB779003C397B /* AOBSelectViewController.m */,
-				3C560D6E1BDBB792003C397B /* AOBCarDetailsTableViewController.h */,
-				3C560D6F1BDBB792003C397B /* AOBCarDetailsTableViewController.m */,
+				3C560D6E1BDBB792003C397B /* AOBCarsTableViewController.h */,
+				3C560D6F1BDBB792003C397B /* AOBCarsTableViewController.m */,
 				3C0853AC1BDBE92F00F957FE /* AOBYoutubeViewController.h */,
 				3C0853AD1BDBE92F00F957FE /* AOBYoutubeViewController.m */,
+				3C0853BF1BDC0A7A00F957FE /* AOBCarDetailsViewController.h */,
+				3C0853C01BDC0A7A00F957FE /* AOBCarDetailsViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -353,6 +378,10 @@
 		3C560DB91BDBC68B003C397B /* MagicalRecordModels */ = {
 			isa = PBXGroup;
 			children = (
+				3C0853C71BDC2A4500F957FE /* ImageEnt+CoreDataProperties.h */,
+				3C0853C81BDC2A4500F957FE /* ImageEnt+CoreDataProperties.m */,
+				3C0853C91BDC2A4500F957FE /* ImageEnt.h */,
+				3C0853CA1BDC2A4500F957FE /* ImageEnt.m */,
 				3C560DBD1BDBC874003C397B /* Car+CoreDataProperties.h */,
 				3C560DBE1BDBC874003C397B /* Car+CoreDataProperties.m */,
 				3C560DBF1BDBC874003C397B /* Car.h */,
@@ -365,6 +394,8 @@
 		3C560DC31BDBC87F003C397B /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
+				3C0853CD1BDC2AC800F957FE /* AOBImageEntityMapper.h */,
+				3C0853CE1BDC2AC800F957FE /* AOBImageEntityMapper.m */,
 				3C560DC41BDBC894003C397B /* AOBBaseMapper.h */,
 				3C560DC51BDBC894003C397B /* AOBBaseMapper.m */,
 				3C560DCA1BDBC97A003C397B /* AOBCarMapper.h */,
@@ -512,6 +543,7 @@
 				3C560D381BDBAAF3003C397B /* Assets.xcassets in Resources */,
 				3C560D361BDBAAF3003C397B /* Main.storyboard in Resources */,
 				3C560D721BDBB977003C397B /* Default-568h@2x.png in Resources */,
+				3C0853C61BDC1F0300F957FE /* fiatAbarth.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,18 +624,21 @@
 				3C560DAE1BDBC362003C397B /* NSArray+LSCArrayAdditions.m in Sources */,
 				3C560DB41BDBC362003C397B /* UILabel+LSCLabelAdditions.m in Sources */,
 				3C560D901BDBC359003C397B /* LSCOperatingSystemInfo.m in Sources */,
+				3C0853CF1BDC2AC800F957FE /* AOBImageEntityMapper.m in Sources */,
 				3C560DC61BDBC894003C397B /* AOBBaseMapper.m in Sources */,
 				3C560DB51BDBC362003C397B /* UILabel+VerticalAlign.m in Sources */,
 				3C560DAF1BDBC362003C397B /* NSString+LSCStringAdditions.m in Sources */,
 				3C560D6D1BDBB779003C397B /* AOBSelectViewController.m in Sources */,
-				3C560D701BDBB792003C397B /* AOBCarDetailsTableViewController.m in Sources */,
+				3C560D701BDBB792003C397B /* AOBCarsTableViewController.m in Sources */,
 				3C560D6A1BDBB769003C397B /* AOBLoadViewController.m in Sources */,
+				3C0853CB1BDC2A4500F957FE /* ImageEnt+CoreDataProperties.m in Sources */,
 				3C560DB61BDBC362003C397B /* UISlider+SliderTouchPoint.m in Sources */,
 				3C560D911BDBC359003C397B /* LSCUIDeviceIdentifier.m in Sources */,
 				3C560DB31BDBC362003C397B /* UIImageView+LSCImageViewAdditions.m in Sources */,
 				3C560DCC1BDBC97A003C397B /* AOBCarMapper.m in Sources */,
 				3C560D301BDBAAF3003C397B /* AppDelegate.m in Sources */,
 				3C560DB21BDBC362003C397B /* UIImage+LLMImageAdditions.m in Sources */,
+				3C0853CC1BDC2A4500F957FE /* ImageEnt.m in Sources */,
 				3C0853AE1BDBE92F00F957FE /* AOBYoutubeViewController.m in Sources */,
 				3C560D7F1BDBBF68003C397B /* AOBBaseVIewHelper.m in Sources */,
 				3C560DC21BDBC874003C397B /* Car.m in Sources */,
@@ -617,6 +652,7 @@
 				3C560DAD1BDBC362003C397B /* FUIButton+LSCButtonStyle.m in Sources */,
 				3C0853B21BDBEF4800F957FE /* AOBBeaconDetectionManager.m in Sources */,
 				3C560D8F1BDBC359003C397B /* LSCLoggingWrapper.m in Sources */,
+				3C0853C11BDC0A7A00F957FE /* AOBCarDetailsViewController.m in Sources */,
 				3C560DB11BDBC362003C397B /* UIColor+LSCColorAdditions.m in Sources */,
 				3C560D8E1BDBC359003C397B /* LSCDeviceDetails.m in Sources */,
 			);

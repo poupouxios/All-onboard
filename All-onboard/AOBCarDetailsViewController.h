@@ -1,5 +1,5 @@
 //
-//  AOBCarDetailsTableViewController.h
+//  AOBCarDetailsViewController.h
 //  All-onboard
 //
 //  Created by Valentinos Papasavvas on 24/10/2015.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AOBCarDetailsTableViewController : UITableViewController
+@interface AOBCarDetailsViewController : UIViewController
+
+@property (nonatomic,strong) Car *carDetails;
 
 @end

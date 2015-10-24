@@ -10,8 +10,15 @@
         <attribute name="gearing" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="intro_video_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="layout" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="carImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ImageEnt" inverseName="car" inverseEntity="ImageEnt" syncable="YES"/>
+    </entity>
+    <entity name="ImageEnt" representedClassName="ImageEnt" syncable="YES">
+        <attribute name="imageData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="imageFilename" attributeType="String" syncable="YES"/>
+        <relationship name="car" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Car" inverseName="carImage" inverseEntity="Car" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Car" positionX="-216" positionY="-333" width="128" height="178"/>
+        <element name="Car" positionX="-216" positionY="-333" width="128" height="193"/>
+        <element name="ImageEnt" positionX="115" positionY="-315" width="128" height="88"/>
     </elements>
 </model>

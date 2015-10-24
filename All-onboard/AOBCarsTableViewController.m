@@ -6,16 +6,18 @@
 //  Copyright © 2015 Llamadigital. All rights reserved.
 //
 
-#import "AOBCarDetailsTableViewController.h"
+#import "AOBCarsTableViewController.h"
+#import "AOBCarDetailsViewController.h"
 
-@interface AOBCarDetailsTableViewController ()
+@interface AOBCarsTableViewController ()
 
 @property (nonatomic,strong) NSArray *cars;
 @property (strong, nonatomic) IBOutlet UITableView *carsTable;
+@property (strong,nonatomic) Car *selectedCar;
 
 @end
 
-@implementation AOBCarDetailsTableViewController
+@implementation AOBCarsTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -61,7 +63,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //[self performSegueWithIdentifier:@"carDetails" sender:self];
+    self.selectedCar = [self.cars objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"carDetails" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    AOBCarDetailsViewController *carDetailsVC = [segue destinationViewController];
+    carDetailsVC.carDetails = self.selectedCar;
 }
 
 @end
