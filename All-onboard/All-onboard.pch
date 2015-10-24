@@ -1,0 +1,25 @@
+//
+//  All-onboard.pch
+//  All-onboard
+//
+//  Created by Valentinos Papasavvas on 24/10/2015.
+//  Copyright © 2015 Llamadigital. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "AOBConfig.h"
+#import "LSCGeneralHelpersCoreLibraries.h"
+#import "Categories/FUIAlertView+CustomStyle.h"
+#import "Categories/UIColor+LSCColorAdditions.h"
+#import <FlatUIKit/FlatUIKit.h>
+#import <MagicalRecord/MagicalRecord.h>
+
+#endif
