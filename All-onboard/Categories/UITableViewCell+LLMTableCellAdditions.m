@@ -11,7 +11,7 @@
 @implementation UITableViewCell (LLMTableCellAdditions)
 
 - (void) applyColorForCells:(BOOL)addChevron andSecondaryColour:(NSString *)secondaryColour{
-    [self configureFlatCellWithColor:[UIColor colorFromHexString:kBackgroundColor] selectedColor:[UIColor colorFromHexString:kBorderColour]];
+    [self configureFlatCellWithColor:[UIColor colorFromHexString:secondaryColour] selectedColor:[UIColor colorFromHexString:kBorderColour]];
     self.separatorHeight = 5.0f;
     if(addChevron){
         self.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chevron"]];

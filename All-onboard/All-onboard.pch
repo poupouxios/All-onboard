@@ -21,5 +21,8 @@
 #import "Categories/UIColor+LSCColorAdditions.h"
 #import <FlatUIKit/FlatUIKit.h>
 #import <MagicalRecord/MagicalRecord.h>
+#import <AFNetworking/AFNetworking.h>
+#import "AOBCarMapper.h"
+#import "AOBApiHandler.h"
 
 #endif

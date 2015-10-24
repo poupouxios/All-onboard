@@ -13,9 +13,9 @@
 - (void) applyFlatDesignForUIButton{
     self.buttonColor = [UIColor colorFromHexString:kButtonBackgroundColor];
     self.titleLabel.font = [UIFont systemFontOfSize:20];
-    self.layer.cornerRadius = 3.0f;
+    self.layer.cornerRadius = 5.0f;
     self.layer.borderColor = [[UIColor colorFromHexCode:kBorderColour]CGColor];
-    self.layer.borderWidth = 3.0f;
+    self.layer.borderWidth = 2.0f;
     
     [self setTitleColor:[UIColor colorFromHexString:kFontColour] forState:UIControlStateNormal];
 }

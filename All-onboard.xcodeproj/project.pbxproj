@@ -42,6 +42,7 @@
 		3C560DC21BDBC874003C397B /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560DC01BDBC874003C397B /* Car.m */; };
 		3C560DC61BDBC894003C397B /* AOBBaseMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560DC51BDBC894003C397B /* AOBBaseMapper.m */; };
 		3C560DCC1BDBC97A003C397B /* AOBCarMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560DCB1BDBC97A003C397B /* AOBCarMapper.m */; };
+		3C560DD01BDBCC0B003C397B /* AOBApiHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560DCF1BDBCC0B003C397B /* AOBApiHandler.m */; };
 		84A36440AF2CE63570350E16 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6259472FA8793EDD922FB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +136,8 @@
 		3C560DC51BDBC894003C397B /* AOBBaseMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOBBaseMapper.m; sourceTree = "<group>"; };
 		3C560DCA1BDBC97A003C397B /* AOBCarMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOBCarMapper.h; sourceTree = "<group>"; };
 		3C560DCB1BDBC97A003C397B /* AOBCarMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOBCarMapper.m; sourceTree = "<group>"; };
+		3C560DCE1BDBCC0B003C397B /* AOBApiHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOBApiHandler.h; sourceTree = "<group>"; };
+		3C560DCF1BDBCC0B003C397B /* AOBApiHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOBApiHandler.m; sourceTree = "<group>"; };
 		A7C422A67A00A086385A3940 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B0158FB06591A72FEFDF8F9B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,6 +194,7 @@
 		3C560D2A1BDBAAF3003C397B /* All-onboard */ = {
 			isa = PBXGroup;
 			children = (
+				3C560DCD1BDBCBFA003C397B /* API */,
 				3C560DC31BDBC87F003C397B /* Mappers */,
 				3C560DB91BDBC68B003C397B /* MagicalRecordModels */,
 				3C560D791BDBBD8A003C397B /* Config */,
@@ -330,6 +334,15 @@
 				3C560DCB1BDBC97A003C397B /* AOBCarMapper.m */,
 			);
 			name = Mappers;
+			sourceTree = "<group>";
+		};
+		3C560DCD1BDBCBFA003C397B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3C560DCE1BDBCC0B003C397B /* AOBApiHandler.h */,
+				3C560DCF1BDBCC0B003C397B /* AOBApiHandler.m */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		8DC7C6A89B4CF3CE6F1CBB29 /* Frameworks */ = {
@@ -551,6 +564,7 @@
 				3C560DB21BDBC362003C397B /* UIImage+LLMImageAdditions.m in Sources */,
 				3C560D7F1BDBBF68003C397B /* AOBBaseVIewHelper.m in Sources */,
 				3C560DC21BDBC874003C397B /* Car.m in Sources */,
+				3C560DD01BDBCC0B003C397B /* AOBApiHandler.m in Sources */,
 				3C560DAC1BDBC362003C397B /* FUIAlertView+CustomStyle.m in Sources */,
 				3C560D2D1BDBAAF3003C397B /* main.m in Sources */,
 				3C560D8D1BDBC359003C397B /* LSCConnectivityManager.m in Sources */,

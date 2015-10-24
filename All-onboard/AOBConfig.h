@@ -14,5 +14,6 @@ extern NSString * const kBackgroundColor;
 extern NSString * const kButtonBackgroundColor;
 extern NSString * const kFontColour;
 extern NSString * const kBorderColour;
+extern NSString * const kApiUrl;
 
 @end

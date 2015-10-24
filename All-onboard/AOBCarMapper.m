@@ -20,7 +20,7 @@
 }
 
 + (Car *) findOneById:(NSNumber *) entityId{
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"CarId == %@",entityId]];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"carId == %@",entityId]];
     Car *entity = nil;
     NSArray *entities = [Car MR_findAllWithPredicate:predicate];
     if([entities count] > 0){
