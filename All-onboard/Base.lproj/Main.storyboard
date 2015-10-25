@@ -242,29 +242,17 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Vp-EX-r0g">
-                                <rect key="frame" x="20" y="228" width="560" height="27"/>
+                                <rect key="frame" x="20" y="213" width="560" height="27"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVB-g3-xWe" customClass="FUIButton">
-                                <rect key="frame" x="194" y="366" width="212" height="50"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="sRc-jk-MvN"/>
-                                    <constraint firstAttribute="width" constant="212" id="tr9-eZ-e91"/>
-                                </constraints>
-                                <state key="normal" title="Introduction Video"/>
-                                <connections>
-                                    <action selector="viewYoutubeVideo:" destination="oQr-uW-7oi" eventType="touchDown" id="cVN-Kt-9Uo"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ciB-oi-pkT">
-                                <rect key="frame" x="20" y="272" width="570" height="55"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ciB-oi-pkT">
+                                <rect key="frame" x="20" y="257" width="570" height="55"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fuel" translatesAutoresizingMaskIntoConstraints="NO" id="MHg-PM-jkT">
-                                        <rect key="frame" x="0.0" y="8" width="40" height="40"/>
+                                        <rect key="frame" x="-6" y="8" width="40" height="40"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="CXZ-7T-DSV"/>
@@ -287,7 +275,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fuel type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqk-ou-jMn">
-                                        <rect key="frame" x="42" y="8" width="129" height="40"/>
+                                        <rect key="frame" x="37" y="8" width="129" height="40"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -297,7 +285,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="MHg-PM-jkT" firstAttribute="leading" secondItem="ciB-oi-pkT" secondAttribute="leading" id="A1X-bU-Kns"/>
+                                    <constraint firstItem="MHg-PM-jkT" firstAttribute="leading" secondItem="ciB-oi-pkT" secondAttribute="leading" constant="-6" id="A1X-bU-Kns"/>
                                     <constraint firstItem="MHg-PM-jkT" firstAttribute="top" secondItem="ciB-oi-pkT" secondAttribute="top" constant="8" id="Dx1-Jn-Fgj"/>
                                     <constraint firstAttribute="height" constant="55" id="EhR-Ba-fHj"/>
                                     <constraint firstAttribute="trailing" secondItem="egR-aw-FbC" secondAttribute="trailing" constant="5" id="JwM-Fp-x0i"/>
@@ -309,23 +297,46 @@
                                     <constraint firstAttribute="bottom" secondItem="MHg-PM-jkT" secondAttribute="bottom" constant="7" id="mCs-LJ-lxJ"/>
                                     <constraint firstItem="CTt-fq-PfM" firstAttribute="top" secondItem="ciB-oi-pkT" secondAttribute="top" constant="8" id="pMU-q7-o3S"/>
                                     <constraint firstAttribute="bottom" secondItem="egR-aw-FbC" secondAttribute="bottom" constant="7" id="uiA-nc-3oE"/>
-                                    <constraint firstItem="Rqk-ou-jMn" firstAttribute="leading" secondItem="MHg-PM-jkT" secondAttribute="trailing" constant="2" id="yCm-E6-Y7I"/>
+                                    <constraint firstItem="Rqk-ou-jMn" firstAttribute="leading" secondItem="MHg-PM-jkT" secondAttribute="trailing" constant="3" id="yCm-E6-Y7I"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqc-1l-Nwc">
+                                <rect key="frame" x="20" y="326" width="560" height="85"/>
+                                <animations/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras luctus aliquam nibh, ac tristique tortor hendrerit at. Mauris faucibus orci vel lectus mattis cursus. Donec in urna tempor, sollicitudin magna quis, feugiat lacus. Sed ullamcorper lobortis lorem, nec interdum arcu feugiat quis.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVB-g3-xWe" customClass="FUIButton">
+                                <rect key="frame" x="194" y="426" width="212" height="40"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sRc-jk-MvN"/>
+                                    <constraint firstAttribute="width" constant="212" id="tr9-eZ-e91"/>
+                                </constraints>
+                                <state key="normal" title="Introduction Video"/>
+                                <connections>
+                                    <action selector="viewYoutubeVideo:" destination="oQr-uW-7oi" eventType="touchDown" id="cVN-Kt-9Uo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="ciB-oi-pkT" secondAttribute="leading" id="1SW-6B-uZD"/>
-                            <constraint firstItem="wVB-g3-xWe" firstAttribute="top" secondItem="ciB-oi-pkT" secondAttribute="bottom" constant="39" id="Kgc-JE-pcr"/>
+                            <constraint firstItem="wVB-g3-xWe" firstAttribute="top" secondItem="uqc-1l-Nwc" secondAttribute="bottom" constant="15" id="9S3-X9-XIN"/>
+                            <constraint firstItem="uqc-1l-Nwc" firstAttribute="top" secondItem="ciB-oi-pkT" secondAttribute="bottom" constant="14" id="Bcs-3V-YSX"/>
+                            <constraint firstItem="uqc-1l-Nwc" firstAttribute="leading" secondItem="ciB-oi-pkT" secondAttribute="leading" id="KSR-5S-Sg9"/>
                             <constraint firstItem="xLI-DP-69I" firstAttribute="centerX" secondItem="3Vp-EX-r0g" secondAttribute="centerX" id="OxQ-HP-t33"/>
                             <constraint firstItem="xLI-DP-69I" firstAttribute="top" secondItem="gxd-sP-fMM" secondAttribute="top" constant="20" symbolic="YES" id="Sh3-5w-riW"/>
                             <constraint firstItem="3Vp-EX-r0g" firstAttribute="centerX" secondItem="gxd-sP-fMM" secondAttribute="centerX" id="Zsy-C6-hse"/>
-                            <constraint firstItem="ciB-oi-pkT" firstAttribute="centerX" secondItem="gxd-sP-fMM" secondAttribute="centerX" id="c9t-3z-b7U"/>
+                            <constraint firstItem="ciB-oi-pkT" firstAttribute="top" secondItem="3Vp-EX-r0g" secondAttribute="bottom" constant="17" id="c3G-1s-rWR"/>
+                            <constraint firstItem="ciB-oi-pkT" firstAttribute="centerX" secondItem="gxd-sP-fMM" secondAttribute="centerX" constant="5" id="c9t-3z-b7U"/>
                             <constraint firstItem="wVB-g3-xWe" firstAttribute="centerX" secondItem="gxd-sP-fMM" secondAttribute="centerX" id="keS-Wu-wXL"/>
-                            <constraint firstItem="ciB-oi-pkT" firstAttribute="top" secondItem="3Vp-EX-r0g" secondAttribute="bottom" constant="17" id="ngG-d9-rdZ"/>
                             <constraint firstItem="3Vp-EX-r0g" firstAttribute="leading" secondItem="gxd-sP-fMM" secondAttribute="leadingMargin" id="oZC-CP-Kk4"/>
-                            <constraint firstItem="3Vp-EX-r0g" firstAttribute="top" secondItem="xLI-DP-69I" secondAttribute="bottom" constant="28" id="xna-bA-OCn"/>
+                            <constraint firstItem="uqc-1l-Nwc" firstAttribute="trailing" secondItem="3Vp-EX-r0g" secondAttribute="trailing" id="oo6-Xd-8fK"/>
+                            <constraint firstItem="3Vp-EX-r0g" firstAttribute="top" secondItem="xLI-DP-69I" secondAttribute="bottom" constant="13" id="xna-bA-OCn"/>
                         </constraints>
                     </view>
                     <connections>

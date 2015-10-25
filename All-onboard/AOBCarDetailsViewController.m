@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.translucent= NO;
-    self.carTitle.text = [NSString stringWithFormat:@"Welcome to %@ %@",self.carDetails.carMake,self.carDetails.carModel];
+    self.carTitle.text = [NSString stringWithFormat:@"Welcome to %@ %@ guide",self.carDetails.carMake,self.carDetails.carModel];
     self.fuelType.text = self.carDetails.fuel_type;
     self.transmissionLabel.text = self.carDetails.gearing;
     [self.videoButton applyFlatDesignForUIButton];
@@ -32,7 +32,7 @@
         self.carImage.image = [UIImage imageWithData:self.carDetails.carImage.imageData];
     }
     self.carImage.layer.masksToBounds = YES;
-    self.carImage.layer.cornerRadius = self.carImage.image.size.height / 6;
+    self.carImage.layer.cornerRadius = 20;
     // Do any additional setup after loading the view.
 }
 
@@ -60,7 +60,7 @@
     if(self.carDetails.intro_video_id){
         [self performSegueWithIdentifier:@"youtubeVideo" sender:self];
     }else{
-        [AOBBaseVIewHelper setAlertWithOkButton:@"Warning" andAlertDelegate:self andTag:1 andTitle:kNoYoutubeLinkAvailable];
+        [AOBBaseVIewHelper setAlertWithOkButton:kNoYoutubeLinkAvailable andAlertDelegate:self andTag:1 andTitle:@"Warning"];
     }
 }
 @end

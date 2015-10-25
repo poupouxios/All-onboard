@@ -55,7 +55,7 @@
 #pragma mark - Beacon Delegate
 
 - (void)aboBeaconDetectionManagerDelegateBluetoothIsOff{
-    [AOBBaseVIewHelper setAlertWithOkButton:@"Warning" andAlertDelegate:self andTag:1 andTitle:kBluetoothIsOff];
+    [AOBBaseVIewHelper setAlertWithOkButton:kBluetoothIsOff andAlertDelegate:self andTag:1 andTitle:@"Warning"];
     [self.progressHud hide:YES];
 }
 
@@ -68,7 +68,7 @@
 }
 
 - (void)aboBeaconDetectionManagerDelegateDidFailToAccess:(NSString *)failedMessage andTitleMessage:(NSString *)titleMessage{
-    [AOBBaseVIewHelper setAlertWithOkButton:titleMessage andAlertDelegate:self andTag:1 andTitle:failedMessage];
+    [AOBBaseVIewHelper setAlertWithOkButton:failedMessage andAlertDelegate:self andTag:1 andTitle:titleMessage];
     [self.progressHud hide:YES];
 }
 
