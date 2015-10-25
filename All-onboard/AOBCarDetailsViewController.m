@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet FUIButton *videoButton;
 @property (weak, nonatomic) IBOutlet UILabel *fuelType;
 @property (weak, nonatomic) IBOutlet UILabel *transmissionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *carDescription;
 
 @end
 
@@ -35,6 +36,9 @@
     self.carImage.layer.masksToBounds = YES;
     self.carImage.layer.cornerRadius = 20;
     [self addChatButtonOnNavigationBar];
+    if(self.carDetails.carDescription){
+        self.carDescription.text = self.carDetails.carDescription;
+    }
     // Do any additional setup after loading the view.
 }
 

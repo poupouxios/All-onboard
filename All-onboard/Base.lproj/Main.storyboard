@@ -343,6 +343,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="carDescription" destination="uqc-1l-Nwc" id="jAg-Ic-w0c"/>
                         <outlet property="carImage" destination="xLI-DP-69I" id="3H6-vY-DRe"/>
                         <outlet property="carTitle" destination="3Vp-EX-r0g" id="YJR-oG-2X7"/>
                         <outlet property="fuelType" destination="Rqk-ou-jMn" id="cib-Yj-5k2"/>
