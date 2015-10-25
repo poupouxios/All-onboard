@@ -22,6 +22,7 @@
 		3C0853DA1BDC2D2400F957FE /* ImageEnt+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0853D51BDC2D2400F957FE /* ImageEnt+CoreDataProperties.m */; };
 		3C0853DB1BDC2D2400F957FE /* ImageEnt.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0853D71BDC2D2400F957FE /* ImageEnt.m */; };
 		3C4D52341BDCB689005D5535 /* AOBCarChannelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D52331BDCB689005D5535 /* AOBCarChannelViewController.m */; };
+		3C4D52361BDCCDD8005D5535 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C4D52351BDCCDD8005D5535 /* Launch Screen.storyboard */; };
 		3C560D2D1BDBAAF3003C397B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D2C1BDBAAF3003C397B /* main.m */; };
 		3C560D301BDBAAF3003C397B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D2F1BDBAAF3003C397B /* AppDelegate.m */; };
 		3C560D361BDBAAF3003C397B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C560D341BDBAAF3003C397B /* Main.storyboard */; };
@@ -31,7 +32,6 @@
 		3C560D6A1BDBB769003C397B /* AOBLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D691BDBB769003C397B /* AOBLoadViewController.m */; };
 		3C560D6D1BDBB779003C397B /* AOBSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D6C1BDBB779003C397B /* AOBSelectViewController.m */; };
 		3C560D701BDBB792003C397B /* AOBCarsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D6F1BDBB792003C397B /* AOBCarsTableViewController.m */; };
-		3C560D721BDBB977003C397B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C560D711BDBB977003C397B /* Default-568h@2x.png */; };
 		3C560D7C1BDBBDA0003C397B /* AOBConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D7B1BDBBDA0003C397B /* AOBConfig.m */; };
 		3C560D7F1BDBBF68003C397B /* AOBBaseVIewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D7E1BDBBF68003C397B /* AOBBaseVIewHelper.m */; };
 		3C560D8D1BDBC359003C397B /* LSCConnectivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D881BDBC359003C397B /* LSCConnectivityManager.m */; };
@@ -104,6 +104,7 @@
 		3C0853D71BDC2D2400F957FE /* ImageEnt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageEnt.m; sourceTree = "<group>"; };
 		3C4D52321BDCB689005D5535 /* AOBCarChannelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOBCarChannelViewController.h; sourceTree = "<group>"; };
 		3C4D52331BDCB689005D5535 /* AOBCarChannelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOBCarChannelViewController.m; sourceTree = "<group>"; };
+		3C4D52351BDCCDD8005D5535 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		3C560D281BDBAAF3003C397B /* All-onboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "All-onboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C560D2C1BDBAAF3003C397B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C560D2E1BDBAAF3003C397B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,7 +124,6 @@
 		3C560D6C1BDBB779003C397B /* AOBSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOBSelectViewController.m; sourceTree = "<group>"; };
 		3C560D6E1BDBB792003C397B /* AOBCarsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOBCarsTableViewController.h; sourceTree = "<group>"; };
 		3C560D6F1BDBB792003C397B /* AOBCarsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOBCarsTableViewController.m; sourceTree = "<group>"; };
-		3C560D711BDBB977003C397B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3C560D771BDBBD2C003C397B /* LSCGeneralHelpersCoreLibraries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCGeneralHelpersCoreLibraries.h; sourceTree = "<group>"; };
 		3C560D781BDBBD6C003C397B /* All-onboard.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "All-onboard.pch"; sourceTree = "<group>"; };
 		3C560D7A1BDBBDA0003C397B /* AOBConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOBConfig.h; sourceTree = "<group>"; };
@@ -228,7 +228,6 @@
 		3C560D1F1BDBAAF3003C397B = {
 			isa = PBXGroup;
 			children = (
-				3C560D711BDBB977003C397B /* Default-568h@2x.png */,
 				3C560D2A1BDBAAF3003C397B /* All-onboard */,
 				3C560D441BDBAAF3003C397B /* All-onboardTests */,
 				3C560D4F1BDBAAF3003C397B /* All-onboardUITests */,
@@ -267,6 +266,7 @@
 				3C560D371BDBAAF3003C397B /* Assets.xcassets */,
 				3C560D3C1BDBAAF3003C397B /* Info.plist */,
 				3C560D2B1BDBAAF3003C397B /* Supporting Files */,
+				3C4D52351BDCCDD8005D5535 /* Launch Screen.storyboard */,
 			);
 			path = "All-onboard";
 			sourceTree = "<group>";
@@ -547,7 +547,7 @@
 			files = (
 				3C560D381BDBAAF3003C397B /* Assets.xcassets in Resources */,
 				3C560D361BDBAAF3003C397B /* Main.storyboard in Resources */,
-				3C560D721BDBB977003C397B /* Default-568h@2x.png in Resources */,
+				3C4D52361BDCCDD8005D5535 /* Launch Screen.storyboard in Resources */,
 				3C0853C61BDC1F0300F957FE /* fiatAbarth.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -33,12 +33,7 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-//    NSArray *cars = [AOBCarMapper findAll];
-//    if(cars.count > 0){
-//        [self performSegueWithIdentifier:@"firstScreen" sender:self];
-//    }else{
-        [self.apiHandler getAllCarData];
-//    }
+    [self.apiHandler getAllCarData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,7 +44,7 @@
 #pragma mark - Api Handler Delegates
 
 - (void)aobAPiHandlerNextUpdate{
-    self.progressBar.progress += (1 / self.numberOfUpdates);
+    [self performSelectorInBackground:@selector(updateProgressBar) withObject:nil];
 }
 
 - (void)aobAPIHandlerDidFinishSuccessfully{
@@ -68,13 +63,8 @@
     }
 }
 
-
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) updateProgressBar{
+    self.progressBar.progress += (1 / self.numberOfUpdates);
 }
 
 -(BOOL)prefersStatusBarHidden{

@@ -49,7 +49,7 @@
 }
 
 - (void) addChatButtonOnNavigationBar{
-    UIBarButtonItem *chatItem = [[UIBarButtonItem alloc] initWithTitle:@"Chat >" style:UIBarButtonItemStylePlain target:self action:@selector(openChat)];
+    UIBarButtonItem *chatItem = [[UIBarButtonItem alloc] initWithTitle:@"Helpp!!" style:UIBarButtonItemStylePlain target:self action:@selector(openChat)];
     self.navigationItem.rightBarButtonItem = chatItem;
 }
 
