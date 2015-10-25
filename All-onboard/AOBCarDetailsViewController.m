@@ -67,7 +67,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"youtubeVideo"]){
         AOBYoutubeViewController *youtubeVideoPlayer = [segue destinationViewController];
-        youtubeVideoPlayer.youtubeId = self.carDetails.intro_video_id;
+        NSString *phoneLanguage = [self getLanguage];
+        if([phoneLanguage isEqualToString:@"el"] && self.carDetails.el_intro_video_id) {
+            youtubeVideoPlayer.youtubeId = self.carDetails.el_intro_video_id;
+        }else{
+            youtubeVideoPlayer.youtubeId = self.carDetails.intro_video_id;
+        }
     }else{
         AOBCarChannelViewController *carChannelVC = [segue destinationViewController];
         carChannelVC.entityCar = self.carDetails;
@@ -76,11 +81,18 @@
 
 
 - (IBAction)viewYoutubeVideo:(id)sender {
-    if(self.carDetails.intro_video_id){
+    if(self.carDetails.intro_video_id || self.carDetails.el_intro_video_id){
         [self performSegueWithIdentifier:@"youtubeVideo" sender:self];
     }else{
         [AOBBaseVIewHelper setAlertWithOkButton:kNoYoutubeLinkAvailable andAlertDelegate:self andTag:1 andTitle:@"Warning"];
     }
+}
+
+- (NSString *) getLanguage{
+    NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
+    NSArray* languages = [defs objectForKey:@"AppleLanguages"];
+    NSString* preferredLang = [languages objectAtIndex:0];
+    return preferredLang;
 }
 
 -(BOOL)prefersStatusBarHidden{

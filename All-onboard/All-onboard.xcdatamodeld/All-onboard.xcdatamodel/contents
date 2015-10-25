@@ -6,6 +6,7 @@
         <attribute name="carId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="carMake" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="carModel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="el_intro_video_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fuel_type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="gearing" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="intro_video_id" optional="YES" attributeType="String" syncable="YES"/>
@@ -18,7 +19,7 @@
         <relationship name="car" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Car" inverseName="carImage" inverseEntity="Car" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Car" positionX="-216" positionY="-333" width="128" height="193"/>
+        <element name="Car" positionX="-216" positionY="-333" width="128" height="208"/>
         <element name="ImageEnt" positionX="115" positionY="-315" width="128" height="88"/>
     </elements>
 </model>
