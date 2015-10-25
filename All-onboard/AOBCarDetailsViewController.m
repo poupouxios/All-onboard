@@ -8,6 +8,7 @@
 
 #import "AOBCarDetailsViewController.h"
 #import "AOBYoutubeViewController.h"
+#import "AOBCarChannelViewController.h"
 
 @interface AOBCarDetailsViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *carImage;
@@ -33,6 +34,7 @@
     }
     self.carImage.layer.masksToBounds = YES;
     self.carImage.layer.cornerRadius = 20;
+    [self addChatButtonOnNavigationBar];
     // Do any additional setup after loading the view.
 }
 
@@ -46,13 +48,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) addChatButtonOnNavigationBar{
+    UIBarButtonItem *chatItem = [[UIBarButtonItem alloc] initWithTitle:@"Chat >" style:UIBarButtonItemStylePlain target:self action:@selector(openChat)];
+    self.navigationItem.rightBarButtonItem = chatItem;
+}
+
+- (void) openChat{
+    [self performSegueWithIdentifier:@"openChannel" sender:self];
+}
 
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    AOBYoutubeViewController *youtubeVideoPlayer = [segue destinationViewController];
-    youtubeVideoPlayer.youtubeId = self.carDetails.intro_video_id;
+    if([segue.identifier isEqualToString:@"youtubeVideo"]){
+        AOBYoutubeViewController *youtubeVideoPlayer = [segue destinationViewController];
+        youtubeVideoPlayer.youtubeId = self.carDetails.intro_video_id;
+    }else{
+        AOBCarChannelViewController *carChannelVC = [segue destinationViewController];
+        carChannelVC.entityCar = self.carDetails;
+    }
 }
 
 

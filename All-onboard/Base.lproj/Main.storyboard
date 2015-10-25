@@ -236,21 +236,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fiatAbarth.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xLI-DP-69I">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fiatAbarth.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xLI-DP-69I">
                                 <rect key="frame" x="150" y="20" width="300" height="180"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="WWt-zU-kQg"/>
+                                    <constraint firstAttribute="height" constant="180" id="WtN-eV-D7U"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Car Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Vp-EX-r0g">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Vp-EX-r0g">
                                 <rect key="frame" x="20" y="213" width="560" height="27"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ciB-oi-pkT">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ciB-oi-pkT">
                                 <rect key="frame" x="20" y="257" width="570" height="55"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fuel" translatesAutoresizingMaskIntoConstraints="NO" id="MHg-PM-jkT">
@@ -322,14 +323,6 @@
                                     <action selector="viewYoutubeVideo:" destination="oQr-uW-7oi" eventType="touchDown" id="cVN-Kt-9Uo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFv-if-wPE">
-                                <rect key="frame" x="551" y="20" width="33" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Chat"/>
-                                <connections>
-                                    <segue destination="7lg-cV-IVV" kind="show" identifier="openChannel" id="uRY-yR-DbH"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -343,9 +336,7 @@
                             <constraint firstItem="3Vp-EX-r0g" firstAttribute="centerX" secondItem="gxd-sP-fMM" secondAttribute="centerX" id="Zsy-C6-hse"/>
                             <constraint firstItem="ciB-oi-pkT" firstAttribute="top" secondItem="3Vp-EX-r0g" secondAttribute="bottom" constant="17" id="c3G-1s-rWR"/>
                             <constraint firstItem="ciB-oi-pkT" firstAttribute="centerX" secondItem="gxd-sP-fMM" secondAttribute="centerX" constant="5" id="c9t-3z-b7U"/>
-                            <constraint firstItem="oFv-if-wPE" firstAttribute="top" secondItem="dmx-Hr-heB" secondAttribute="bottom" constant="20" id="e99-g2-6ra"/>
                             <constraint firstItem="wVB-g3-xWe" firstAttribute="centerX" secondItem="gxd-sP-fMM" secondAttribute="centerX" id="keS-Wu-wXL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oFv-if-wPE" secondAttribute="trailing" constant="-4" id="mJI-R6-Z3V"/>
                             <constraint firstItem="3Vp-EX-r0g" firstAttribute="leading" secondItem="gxd-sP-fMM" secondAttribute="leadingMargin" id="oZC-CP-Kk4"/>
                             <constraint firstItem="uqc-1l-Nwc" firstAttribute="trailing" secondItem="3Vp-EX-r0g" secondAttribute="trailing" id="oo6-Xd-8fK"/>
                             <constraint firstItem="3Vp-EX-r0g" firstAttribute="top" secondItem="xLI-DP-69I" secondAttribute="bottom" constant="13" id="xna-bA-OCn"/>
@@ -358,16 +349,17 @@
                         <outlet property="transmissionLabel" destination="egR-aw-FbC" id="5kH-gJ-xiw"/>
                         <outlet property="videoButton" destination="wVB-g3-xWe" id="KyW-AD-Xhe"/>
                         <segue destination="RFf-2z-AYZ" kind="show" identifier="youtubeVideo" id="gbJ-qP-GuL"/>
+                        <segue destination="7lg-cV-IVV" kind="show" identifier="openChannel" id="Cy6-PH-i7q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JkX-Aa-9qx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1838" y="511"/>
         </scene>
-        <!--View Controller-->
+        <!--Car Channel View Controller-->
         <scene sceneID="IxU-Rl-Rnq">
             <objects>
-                <viewController id="7lg-cV-IVV" sceneMemberID="viewController">
+                <viewController id="7lg-cV-IVV" customClass="AOBCarChannelViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3g9-N1-kcf"/>
                         <viewControllerLayoutGuide type="bottom" id="ESD-ap-HO6"/>
@@ -377,42 +369,74 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V1h-Tu-5YZ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="540"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ln0-Ca-dUO">
-                                <rect key="frame" x="0.0" y="544" width="540" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ir-Ua-APt">
+                                <rect key="frame" x="0.0" y="548" width="600" height="47"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HHK-J6-t7i">
+                                        <rect key="frame" x="8" y="9" width="115" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="115" id="bq9-3a-QA4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ln0-Ca-dUO">
+                                        <rect key="frame" x="131" y="9" width="410" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLy-dm-uSj">
+                                        <rect key="frame" x="549" y="8" width="36" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="TIV-pL-7jO"/>
+                                        </constraints>
+                                        <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="sendButton:" destination="7lg-cV-IVV" eventType="touchDown" id="J33-jt-GL6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLy-dm-uSj">
-                                <rect key="frame" x="553" y="543" width="36" height="30"/>
-                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="36" id="Sn2-3E-xF6"/>
+                                    <constraint firstItem="KLy-dm-uSj" firstAttribute="baseline" secondItem="Ln0-Ca-dUO" secondAttribute="baseline" id="2CP-ue-Y1I"/>
+                                    <constraint firstAttribute="trailing" secondItem="KLy-dm-uSj" secondAttribute="trailing" constant="15" id="4Oa-Qd-cNJ"/>
+                                    <constraint firstItem="Ln0-Ca-dUO" firstAttribute="baseline" secondItem="HHK-J6-t7i" secondAttribute="baseline" id="6G8-0m-axv"/>
+                                    <constraint firstItem="KLy-dm-uSj" firstAttribute="top" secondItem="0ir-Ua-APt" secondAttribute="topMargin" id="6jT-jb-bjS"/>
+                                    <constraint firstItem="Ln0-Ca-dUO" firstAttribute="leading" secondItem="HHK-J6-t7i" secondAttribute="trailing" constant="8" symbolic="YES" id="8vx-Av-l49"/>
+                                    <constraint firstItem="HHK-J6-t7i" firstAttribute="bottom" secondItem="0ir-Ua-APt" secondAttribute="bottomMargin" id="99P-OP-GkY"/>
+                                    <constraint firstItem="KLy-dm-uSj" firstAttribute="leading" secondItem="Ln0-Ca-dUO" secondAttribute="trailing" constant="8" symbolic="YES" id="Msd-mH-zDE"/>
+                                    <constraint firstItem="HHK-J6-t7i" firstAttribute="leading" secondItem="0ir-Ua-APt" secondAttribute="leadingMargin" id="aMd-Qm-bjZ"/>
                                 </constraints>
-                                <state key="normal" title="Send"/>
-                            </button>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KLy-dm-uSj" firstAttribute="leading" secondItem="Ln0-Ca-dUO" secondAttribute="trailing" constant="13" id="5RB-ew-ypD"/>
-                            <constraint firstItem="ESD-ap-HO6" firstAttribute="top" secondItem="Ln0-Ca-dUO" secondAttribute="bottom" constant="26" id="5dk-zi-Iiv"/>
-                            <constraint firstItem="KLy-dm-uSj" firstAttribute="baseline" secondItem="Ln0-Ca-dUO" secondAttribute="baseline" id="AlU-P6-IIg"/>
-                            <constraint firstAttribute="trailing" secondItem="V1h-Tu-5YZ" secondAttribute="trailing" id="EGK-b2-lWL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KLy-dm-uSj" secondAttribute="trailing" constant="-9" id="OKy-n0-0AB"/>
-                            <constraint firstItem="Ln0-Ca-dUO" firstAttribute="top" secondItem="V1h-Tu-5YZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Oe9-ly-fm7"/>
-                            <constraint firstItem="Ln0-Ca-dUO" firstAttribute="leading" secondItem="V1h-Tu-5YZ" secondAttribute="leading" id="SVa-sV-0Ys"/>
-                            <constraint firstItem="V1h-Tu-5YZ" firstAttribute="top" secondItem="Evb-mU-iIF" secondAttribute="top" id="Uvb-HH-dc3"/>
-                            <constraint firstItem="V1h-Tu-5YZ" firstAttribute="leading" secondItem="Evb-mU-iIF" secondAttribute="leading" id="okv-6D-4dw"/>
+                            <constraint firstItem="V1h-Tu-5YZ" firstAttribute="leading" secondItem="Evb-mU-iIF" secondAttribute="leading" id="0Jj-9j-Z3J"/>
+                            <constraint firstItem="0ir-Ua-APt" firstAttribute="trailing" secondItem="V1h-Tu-5YZ" secondAttribute="trailing" id="1Py-la-fIS"/>
+                            <constraint firstItem="0ir-Ua-APt" firstAttribute="top" secondItem="V1h-Tu-5YZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Afp-2e-WLl"/>
+                            <constraint firstItem="V1h-Tu-5YZ" firstAttribute="top" secondItem="3g9-N1-kcf" secondAttribute="bottom" id="GQT-qq-AOy"/>
+                            <constraint firstAttribute="trailing" secondItem="V1h-Tu-5YZ" secondAttribute="trailing" id="dPX-dR-KWn"/>
+                            <constraint firstItem="0ir-Ua-APt" firstAttribute="leading" secondItem="V1h-Tu-5YZ" secondAttribute="leading" id="gzs-fS-eD7"/>
+                            <constraint firstItem="ESD-ap-HO6" firstAttribute="top" secondItem="0ir-Ua-APt" secondAttribute="bottom" constant="5" id="x15-Ae-mlt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="keyboardHeight" destination="x15-Ae-mlt" id="62n-m4-5U4"/>
+                        <outlet property="message" destination="Ln0-Ca-dUO" id="m0c-bv-Bjc"/>
+                        <outlet property="textView" destination="V1h-Tu-5YZ" id="DMz-fL-t0h"/>
+                        <outlet property="username" destination="HHK-J6-t7i" id="XeE-pn-eAG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVL-ht-d7J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

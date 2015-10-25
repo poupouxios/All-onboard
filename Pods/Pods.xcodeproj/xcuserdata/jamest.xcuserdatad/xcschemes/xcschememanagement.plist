@@ -29,12 +29,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PhoenixClient.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Reachability.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SocketRocket.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -72,22 +82,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>01BDD0630F60C8892ACE48B24994637F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>410B25DF16EA5C5B3E2698F74F9625FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>48708B91DD99295BE0CB7964F4758BB2</key>
+		<key>8AC46136079BD537C1379D15B6B2B02A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6F67BC75F7D52377BA39A5DB9A244669</key>
+		<key>9358571773D5DAA48FB6CD212703765E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C829B28E34B8B03D3773B4AB92C6FB56</key>
+		<key>B4487E23C94E460E05FA9864E5F7D0BD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C83E42E7FF1CA294C4F68AC1A34B67CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,7 +117,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D60C27ED8D6E8A5F550CAA5FEA87292E</key>
+		<key>D5D7C84B2682ED10ECE7308348616062</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,17 +127,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D987989624CD246B82CB6203758193F0</key>
+		<key>EB2F2C666D8253770BB1E3D33B1243D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E1FDA7FAB92CFF51255BA0DE3B10ADF1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F10C5DF5837D0F49857069E60069D03D</key>
+		<key>EBB6EB22FFFFC65525900EE5CB073559</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -133,6 +148,11 @@
 			<true/>
 		</dict>
 		<key>FE2F1D7B9D9FCEA148517E4657B243F4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FEA4CE935C722859598FA7E78033099D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

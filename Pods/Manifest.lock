@@ -27,8 +27,11 @@ PODS:
   - JRSwizzle (1.0)
   - MagicalRecord (2.3.0)
   - MBProgressHUD (0.9.1)
+  - PhoenixClient (1.0.1):
+    - SocketRocket (= 0.3.1-beta2)
   - pop (1.0.8)
   - Reachability (3.2)
+  - SocketRocket (0.3.1-beta2)
   - ViewDeck (2.2.11)
   - WYPopoverController (0.3.8)
   - youtube-ios-player-helper (0.1.4)
@@ -40,6 +43,7 @@ DEPENDENCIES:
   - iOS7-TableTopSeparator
   - MagicalRecord (~> 2.2)
   - MBProgressHUD (from `https://github.com/m-nakada/MBProgressHUD.git`, branch `master`)
+  - PhoenixClient
   - pop (from `https://github.com/facebook/pop.git`)
   - Reachability
   - ViewDeck (~> 2.2.11)
@@ -69,8 +73,10 @@ SPEC CHECKSUMS:
   JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
   MagicalRecord: 89eb7d7ead39fb37f01c3d010665ee94d17f8dba
   MBProgressHUD: c34da5f231d7c38b8bc9d2cb08f81509d0bea7b0
+  PhoenixClient: 3d4316781a9e88c0b0858c68be1799c0ed1f8ca7
   pop: ce367ec8f3b48b47ea8958e31ed2f9c6c7df7f92
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SocketRocket: 7284ab9370a06c99aba92b2fe3a32aedd0f9a6fa
   ViewDeck: ce795f929d00d1e0fd63f61d79cc92a9ea050ec9
   WYPopoverController: dda54780e1bef186464ae5a10ab9b4998c279e89
   youtube-ios-player-helper: 84b1485ebb4b7c6b619c6e05edcb55186723a7c6

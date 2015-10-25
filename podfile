@@ -9,3 +9,4 @@ pod 'MagicalRecord', '~>2.2'
 pod 'AFNetworking'
 pod 'Reachability'
 pod "youtube-ios-player-helper", "~> 0.1.4"
+pod 'PhoenixClient'

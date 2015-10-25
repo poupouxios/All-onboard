@@ -10,4 +10,6 @@
 
 @interface AOBCarChannelViewController : UIViewController
 
+@property (nonatomic,strong) Car *entityCar;
+
 @end
