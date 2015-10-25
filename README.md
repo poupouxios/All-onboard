@@ -1,5 +1,5 @@
 # All-onboard
-Hack Manchester App 2015
+Hack Manchester App 2015. The app was on the 3 finalists of rentalcars.com and on the 3 finalists of The Barclays/Rise Challenge. We won the competition of The Barclays/Rise Challenge. 
 
 # Description
 
