@@ -63,4 +63,8 @@
         [AOBBaseVIewHelper setAlertWithOkButton:kNoYoutubeLinkAvailable andAlertDelegate:self andTag:1 andTitle:@"Warning"];
     }
 }
+
+-(BOOL)prefersStatusBarHidden{
+    return YES;
+}
 @end

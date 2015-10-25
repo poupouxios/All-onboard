@@ -21,6 +21,7 @@
 		3C0853D91BDC2D2400F957FE /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0853D31BDC2D2400F957FE /* Car.m */; };
 		3C0853DA1BDC2D2400F957FE /* ImageEnt+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0853D51BDC2D2400F957FE /* ImageEnt+CoreDataProperties.m */; };
 		3C0853DB1BDC2D2400F957FE /* ImageEnt.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0853D71BDC2D2400F957FE /* ImageEnt.m */; };
+		3C4D52341BDCB689005D5535 /* AOBCarChannelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D52331BDCB689005D5535 /* AOBCarChannelViewController.m */; };
 		3C560D2D1BDBAAF3003C397B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D2C1BDBAAF3003C397B /* main.m */; };
 		3C560D301BDBAAF3003C397B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D2F1BDBAAF3003C397B /* AppDelegate.m */; };
 		3C560D361BDBAAF3003C397B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C560D341BDBAAF3003C397B /* Main.storyboard */; };
@@ -101,6 +102,8 @@
 		3C0853D51BDC2D2400F957FE /* ImageEnt+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ImageEnt+CoreDataProperties.m"; sourceTree = "<group>"; };
 		3C0853D61BDC2D2400F957FE /* ImageEnt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageEnt.h; sourceTree = "<group>"; };
 		3C0853D71BDC2D2400F957FE /* ImageEnt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageEnt.m; sourceTree = "<group>"; };
+		3C4D52321BDCB689005D5535 /* AOBCarChannelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOBCarChannelViewController.h; sourceTree = "<group>"; };
+		3C4D52331BDCB689005D5535 /* AOBCarChannelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOBCarChannelViewController.m; sourceTree = "<group>"; };
 		3C560D281BDBAAF3003C397B /* All-onboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "All-onboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C560D2C1BDBAAF3003C397B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C560D2E1BDBAAF3003C397B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -308,6 +311,8 @@
 				3C0853AD1BDBE92F00F957FE /* AOBYoutubeViewController.m */,
 				3C0853BF1BDC0A7A00F957FE /* AOBCarDetailsViewController.h */,
 				3C0853C01BDC0A7A00F957FE /* AOBCarDetailsViewController.m */,
+				3C4D52321BDCB689005D5535 /* AOBCarChannelViewController.h */,
+				3C4D52331BDCB689005D5535 /* AOBCarChannelViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -648,6 +653,7 @@
 				3C560D8D1BDBC359003C397B /* LSCConnectivityManager.m in Sources */,
 				3C560DB71BDBC362003C397B /* UITableViewCell+LLMTableCellAdditions.m in Sources */,
 				3C560DB01BDBC362003C397B /* NSURL+LSCURLAdditions.m in Sources */,
+				3C4D52341BDCB689005D5535 /* AOBCarChannelViewController.m in Sources */,
 				3C560DAD1BDBC362003C397B /* FUIButton+LSCButtonStyle.m in Sources */,
 				3C0853B21BDBEF4800F957FE /* AOBBeaconDetectionManager.m in Sources */,
 				3C560D8F1BDBC359003C397B /* LSCLoggingWrapper.m in Sources */,

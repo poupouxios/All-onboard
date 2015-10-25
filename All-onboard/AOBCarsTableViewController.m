@@ -72,4 +72,8 @@
     carDetailsVC.carDetails = self.selectedCar;
 }
 
+-(BOOL)prefersStatusBarHidden{
+    return YES;
+}
+
 @end

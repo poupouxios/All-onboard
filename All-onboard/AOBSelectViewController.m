@@ -19,13 +19,14 @@
 @property (nonatomic,strong) AOBCustomProgressHUD *progressHud;
 @property (nonatomic,strong) NSNumber *beaconMajor;
 @property (nonatomic,strong) UIView *pulseView;
-
+@property (nonatomic,assign) CGPoint initialCarImagePosition;
 @end
 
 @implementation AOBSelectViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.initialCarImagePosition = self.findMyCarImage.frame.origin;
     [self.selectFromListButton applyFlatDesignForUIButton];
     self.beaconDetectionManager = [[AOBBeaconDetectionManager alloc] init];
     self.beaconDetectionManager.delegate = self;
@@ -36,9 +37,9 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self.findMyCarImage.layer removeAllAnimations];
     self.searchingCarLabel.text = kSearchingLabel;
     [self createAnimationForCarImage:kAnimatingScannerColor];
-    self.findMyCarImage.alpha = 1;
     [self.navigationController setNavigationBarHidden:YES];
 }
 
@@ -121,23 +122,37 @@
 
 - (void) makeCarRun{
     [CATransaction begin];
-    self.searchingCarLabel.text = kCarFoundLabel;
+    
+    NSArray *cars = [AOBCarMapper findAll];
+    for (Car *entityCar in cars) {
+        if([entityCar.beacon_major isEqualToNumber:self.beaconMajor]){
+            self.searchingCarLabel.text = [NSString stringWithFormat:@"Loading %@ %@ guide..",entityCar.carMake,entityCar.carModel];
+            [self.searchingCarLabel setNeedsUpdateConstraints];
+            break;
+        }
+    }
+    
     [self createAnimationForCarImage:kAnimatingScannerBeaconFoundColor];
     CGSize deviceSize = [LSCDeviceDetails getDimensionsOfDevice];
     CGPoint point0 = self.findMyCarImage.layer.position;
-    CGPoint point1 = { deviceSize.width+self.findMyCarImage.image.size.width + 20, point0.y };
+    CGPoint point1 = { deviceSize.width + 28, point0.y };
     
     CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"position.x"];
+    anim.fillMode = kCAFillModeForwards;
+    anim.removedOnCompletion = NO;
     anim.fromValue    = @(point0.x);
     anim.toValue  = @(point1.x);
     anim.duration   = 1.5f;
-    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     self.findMyCarImage.layer.position = point1;
+    
     [CATransaction setCompletionBlock:^{
         [self.beaconDetectionManager stopSearchingForBeacons];
         [self performSegueWithIdentifier:@"carBeaconDetected" sender:self];
     }];
+
     [self.findMyCarImage.layer  addAnimation:anim forKey:@"position.x"];
+    
     [CATransaction commit];
 }
 
@@ -176,5 +191,8 @@
     [self.beaconDetectionManager stopSearchingForBeacons];
 }
 
+-(BOOL)prefersStatusBarHidden{
+    return YES;
+}
 
 @end

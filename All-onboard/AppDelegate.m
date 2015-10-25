@@ -20,7 +20,6 @@
     NSString *bundleID = (NSString *)[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleIdentifierKey];
     NSString *dbStore  = [NSString stringWithFormat:@"%@.sqlite", bundleID];
     [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:dbStore];
-
     return YES;
 }
 

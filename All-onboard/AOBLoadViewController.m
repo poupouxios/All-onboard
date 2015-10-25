@@ -33,12 +33,12 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    NSArray *cars = [AOBCarMapper findAll];
-    if(cars.count > 0){
-        [self performSegueWithIdentifier:@"firstScreen" sender:self];
-    }else{
+//    NSArray *cars = [AOBCarMapper findAll];
+//    if(cars.count > 0){
+//        [self performSegueWithIdentifier:@"firstScreen" sender:self];
+//    }else{
         [self.apiHandler getAllCarData];
-    }
+//    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,7 +61,7 @@
 }
 
 - (void)aobAPIHandlerDidFailUpdate:(NSString *)failedMessage{
-    [AOBBaseVIewHelper setAlertWithOkButton:@"Error" andAlertDelegate:self andTag:1 andTitle:failedMessage];
+    [AOBBaseVIewHelper setAlertWithOkButton:failedMessage andAlertDelegate:self andTag:1 andTitle:@"Error"];
     NSArray *cars = [AOBCarMapper findAll];
     if(cars.count > 0){
         [self performSegueWithIdentifier:@"firstScreen" sender:self];
@@ -77,5 +77,8 @@
     // Pass the selected object to the new view controller.
 }
 
+-(BOOL)prefersStatusBarHidden{
+    return YES;
+}
 
 @end
