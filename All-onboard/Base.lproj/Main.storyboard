@@ -85,55 +85,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccu-Fa-Cwj" customClass="FUIButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccu-Fa-Cwj" customClass="FUIButton">
                                 <rect key="frame" x="204" y="314" width="193" height="42"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="193" id="FP2-dF-pyD"/>
-                                    <constraint firstAttribute="height" constant="42" id="FPc-HM-rWZ"/>
+                                    <constraint firstAttribute="width" constant="193" id="btH-uJ-8Qm"/>
+                                    <constraint firstAttribute="height" constant="42" id="myG-hJ-Apd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Select from List"/>
                                 <connections>
+                                    <action selector="selectFromListClicked:" destination="JdM-PP-VY3" eventType="touchDown" id="izK-Jk-cXg"/>
                                     <segue destination="T7W-33-u98" kind="show" identifier="showCarDetails" id="DRM-Lx-ysq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcT-Z2-FeH">
-                                <rect key="frame" x="288" y="271" width="24" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Car" translatesAutoresizingMaskIntoConstraints="NO" id="pfy-Xf-gIb">
+                                <rect key="frame" x="236" y="164" width="128" height="76"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Searching for your car..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03B-vJ-jf8">
+                                <rect key="frame" x="184" y="104" width="233" height="33"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcT-Z2-FeH">
+                                <rect key="frame" x="288" y="265" width="24" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nrw-Vy-9rB" customClass="FUIButton">
-                                <rect key="frame" x="204" y="204" width="193" height="42"/>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="Onn-lg-snu"/>
-                                    <constraint firstAttribute="width" constant="193" id="tcO-lh-80R"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Find my car"/>
-                                <connections>
-                                    <action selector="findMyCarClicked:" destination="JdM-PP-VY3" eventType="touchDown" id="iuX-n9-qEe"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Nrw-Vy-9rB" firstAttribute="trailing" secondItem="ccu-Fa-Cwj" secondAttribute="trailing" id="2Qt-6m-UBk"/>
-                            <constraint firstItem="ccu-Fa-Cwj" firstAttribute="centerX" secondItem="ZV9-fD-9Rh" secondAttribute="centerX" id="AoY-ee-O8e"/>
-                            <constraint firstItem="ccu-Fa-Cwj" firstAttribute="top" secondItem="fcT-Z2-FeH" secondAttribute="bottom" constant="22" id="Kib-2Y-Wms"/>
-                            <constraint firstItem="ccu-Fa-Cwj" firstAttribute="top" secondItem="Nrw-Vy-9rB" secondAttribute="bottom" constant="68" id="Uiq-lk-wbW"/>
-                            <constraint firstItem="fcT-Z2-FeH" firstAttribute="centerX" secondItem="ccu-Fa-Cwj" secondAttribute="centerX" id="n8L-Hi-NVh"/>
-                            <constraint firstItem="Nrw-Vy-9rB" firstAttribute="leading" secondItem="ccu-Fa-Cwj" secondAttribute="leading" id="ord-ZL-WKe"/>
-                            <constraint firstItem="Nrw-Vy-9rB" firstAttribute="top" secondItem="FdH-Oj-bJK" secondAttribute="bottom" constant="204" id="z1G-2w-xOI"/>
+                            <constraint firstItem="pfy-Xf-gIb" firstAttribute="centerX" secondItem="ZV9-fD-9Rh" secondAttribute="centerX" id="4q2-SN-hBY"/>
+                            <constraint firstItem="pfy-Xf-gIb" firstAttribute="top" secondItem="03B-vJ-jf8" secondAttribute="bottom" constant="27" id="Nu7-Hu-b8z"/>
+                            <constraint firstItem="fcT-Z2-FeH" firstAttribute="centerX" secondItem="ZV9-fD-9Rh" secondAttribute="centerX" id="Rfl-BG-ZTc"/>
+                            <constraint firstItem="03B-vJ-jf8" firstAttribute="top" secondItem="FdH-Oj-bJK" secondAttribute="bottom" constant="104" id="U0U-nM-ewK"/>
+                            <constraint firstItem="ccu-Fa-Cwj" firstAttribute="centerX" secondItem="ZV9-fD-9Rh" secondAttribute="centerX" id="VE9-iv-d1f"/>
+                            <constraint firstItem="fcT-Z2-FeH" firstAttribute="top" secondItem="pfy-Xf-gIb" secondAttribute="bottom" constant="25" id="Zqu-rE-Afe"/>
+                            <constraint firstItem="ccu-Fa-Cwj" firstAttribute="top" secondItem="fcT-Z2-FeH" secondAttribute="bottom" constant="28" id="bCi-o0-UkX"/>
+                            <constraint firstItem="03B-vJ-jf8" firstAttribute="centerX" secondItem="ZV9-fD-9Rh" secondAttribute="centerX" id="jxm-vZ-OeS"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="findMyCarButton" destination="Nrw-Vy-9rB" id="MzW-nh-cBD"/>
+                        <outlet property="findMyCarImage" destination="pfy-Xf-gIb" id="7Tx-e0-Xb4"/>
+                        <outlet property="searchingCarLabel" destination="03B-vJ-jf8" id="LLC-oE-99i"/>
                         <outlet property="selectFromListButton" destination="ccu-Fa-Cwj" id="AKx-z6-JlK"/>
                         <segue destination="oQr-uW-7oi" kind="show" identifier="carBeaconDetected" id="eLb-zP-EFo"/>
                     </connections>
@@ -343,12 +343,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Car" width="64" height="38"/>
         <image name="Fuel" width="32" height="32"/>
         <image name="Logo" width="200" height="157"/>
         <image name="Transmission" width="32" height="32"/>
         <image name="fiatAbarth.jpg" width="800" height="456"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5TY-Iw-ev5"/>
+        <segue reference="eLb-zP-EFo"/>
     </inferredMetricsTieBreakers>
 </document>

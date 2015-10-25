@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *gearing;
 @property (nullable, nonatomic, retain) NSString *intro_video_id;
 @property (nullable, nonatomic, retain) NSString *layout;
-@property (nullable, nonatomic, retain) NSManagedObject *carImage;
+@property (nullable, nonatomic, retain) ImageEnt *carImage;
 
 @end
 

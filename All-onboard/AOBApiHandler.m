@@ -12,7 +12,7 @@
 
 - (void)getAllCarData{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:[NSString stringWithFormat:@"%@/cars",kApiUrl] parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+    [manager GET:[NSString stringWithFormat:@"%@/api/cars",kApiUrl] parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         NSArray *respondedData = (NSArray *)responseObject;
         [self.delegate aobAPiHAndlerGetNumberOfUpdates:respondedData.count];
         [respondedData enumerateObjectsUsingBlock:^(NSDictionary * obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -23,6 +23,7 @@
         
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         [LSCLoggingWrapper outputMessage:[NSString stringWithFormat:@"Failed to save: %@",operation]];
+        [self.delegate aobAPIHandlerDidFailUpdate:operation.description];
     }];
 }
 

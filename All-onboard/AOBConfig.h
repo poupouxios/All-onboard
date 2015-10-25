@@ -23,5 +23,9 @@ extern NSString * const kBeaconUUID;
 extern NSString * const kBeaconStartDetection;
 extern NSString * const kNoYoutubeLinkAvailable;
 extern NSString * const kLoadingYoutubeVideo;
+extern NSString * const kAnimatingScannerColor;
+extern NSString * const kAnimatingScannerBeaconFoundColor;
+extern NSString * const kSearchingLabel;
+extern NSString * const kCarFoundLabel;
 
 @end

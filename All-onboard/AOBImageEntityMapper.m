@@ -63,7 +63,7 @@
     ImageEnt *entityImage = nil;
     [LSCLoggingWrapper outputMessage:[NSString stringWithFormat:@"Adding image = %@",imageUrl]];
     if(![imageUrl isEqual:[NSNull null]] && imageUrl.length > 0){
-        entityImage = [AOBImageEntityMapper addToDatabase:@{@"imageUrl":imageUrl,@"isThumbnail":@NO}];
+        entityImage = [AOBImageEntityMapper addToDatabase:@{@"imageUrl":[NSString stringWithFormat:@"%@/%@",kApiUrl,imageUrl]}];
     }
     return entityImage;
 }

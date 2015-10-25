@@ -7,6 +7,7 @@
 //
 
 #import "Car.h"
+#import "ImageEnt.h"
 
 @implementation Car
 

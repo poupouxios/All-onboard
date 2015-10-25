@@ -20,7 +20,7 @@
     [super viewDidLoad];
     self.playerView.delegate = self;
     [self.playerView loadWithVideoId:self.youtubeId];
-    self.progressHud = [[AOBCustomProgressHUD alloc] initWithView:self.view andMessage:kLoadingYoutubeVideo andHudMode:MBProgressHUDModeIndeterminate andDisplayButton:NO];
+    self.progressHud = [[AOBCustomProgressHUD alloc] initWithView:self.navigationController.view andMessage:kLoadingYoutubeVideo andHudMode:MBProgressHUDModeIndeterminate andDisplayButton:NO];
     [self.progressHud show:YES];
     // Do any additional setup after loading the view.
 }

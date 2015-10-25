@@ -28,8 +28,11 @@
     self.fuelType.text = self.carDetails.fuel_type;
     self.transmissionLabel.text = self.carDetails.gearing;
     [self.videoButton applyFlatDesignForUIButton];
+    if(self.carDetails.carImage){
+        self.carImage.image = [UIImage imageWithData:self.carDetails.carImage.imageData];
+    }
     self.carImage.layer.masksToBounds = YES;
-    self.carImage.layer.cornerRadius = self.carImage.image.size.height / 4;
+    self.carImage.layer.cornerRadius = self.carImage.image.size.height / 6;
     // Do any additional setup after loading the view.
 }
 

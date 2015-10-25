@@ -14,7 +14,7 @@ NSString * const kBackgroundColor = @"#ffffff";
 NSString * const kButtonBackgroundColor = @"#e1e1e1";
 NSString * const kFontColour = @"#0494d1";
 NSString * const kBorderColour = @"#6b6c6e";
-NSString * const kApiUrl = @"http://192.168.225.29:4000/api/";
+NSString * const kApiUrl = @"http://192.168.225.29:4000";
 NSInteger  const kFlickerDelay = 1;
 NSInteger const kTimesDiscovered = 3;
 float  const kAccelerationThreshold = 1.80;
@@ -23,5 +23,9 @@ NSString * const kBeaconUUID = @"BBBBBBBB-BBBB-BBBB-BBBB-BBBBBBBBBBBB";
 NSString * const kBeaconStartDetection = @"Finding nearest car..";
 NSString * const kNoYoutubeLinkAvailable = @"There is not video available";
 NSString * const kLoadingYoutubeVideo = @"Loading video..";
+NSString * const kAnimatingScannerColor = @"#cdcdcd";
+NSString * const kAnimatingScannerBeaconFoundColor = @"#FF1300";
+NSString * const kSearchingLabel = @"Searching for your car...";
+NSString * const kCarFoundLabel = @"Car found!";
 
 @end

@@ -12,11 +12,13 @@
 
 @interface AOBSelectViewController () <AOBBeaconDetectionManagerDatasource,AOBBeaconDetectionManagerDelegate>
 
-@property (weak, nonatomic) IBOutlet FUIButton *findMyCarButton;
+@property (weak, nonatomic) IBOutlet UIImageView *findMyCarImage;
 @property (weak, nonatomic) IBOutlet FUIButton *selectFromListButton;
+@property (weak, nonatomic) IBOutlet UILabel *searchingCarLabel;
 @property (nonatomic,strong) AOBBeaconDetectionManager *beaconDetectionManager;
 @property (nonatomic,strong) AOBCustomProgressHUD *progressHud;
 @property (nonatomic,strong) NSNumber *beaconMajor;
+@property (nonatomic,strong) UIView *pulseView;
 
 @end
 
@@ -24,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self styleButtons];
+    [self.selectFromListButton applyFlatDesignForUIButton];
     self.beaconDetectionManager = [[AOBBeaconDetectionManager alloc] init];
     self.beaconDetectionManager.delegate = self;
     self.beaconDetectionManager.datasource = self;
@@ -33,12 +35,16 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.searchingCarLabel.text = kSearchingLabel;
+    [self createAnimationForCarImage:kAnimatingScannerColor];
+    self.findMyCarImage.alpha = 1;
     [self.navigationController setNavigationBarHidden:YES];
 }
 
-- (void) styleButtons{
-    [self.findMyCarButton applyFlatDesignForUIButton];
-    [self.selectFromListButton applyFlatDesignForUIButton];
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.beaconDetectionManager startSearchingForBeacons];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,7 +64,7 @@
     [self.beaconDetectionManager stopSearchingForBeacons];
     [LSCLoggingWrapper outputMessage:[NSString stringWithFormat:@"closest beacon is %@",beaconMajor]];
     [self.progressHud hide:YES];
-    [self performSegueWithIdentifier:@"carBeaconDetected" sender:self];
+    [self makeCarRun];
 }
 
 - (void)aboBeaconDetectionManagerDelegateDidFailToAccess:(NSString *)failedMessage andTitleMessage:(NSString *)titleMessage{
@@ -99,21 +105,6 @@
     NSUUID *beaconUUID = [[NSUUID alloc] initWithUUIDString:kBeaconUUID];
     return beaconUUID;
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)findMyCarClicked:(id)sender {
-    [self.beaconDetectionManager startSearchingForBeacons];
-    self.progressHud = [[AOBCustomProgressHUD alloc] initWithView:self.view andMessage:kBeaconStartDetection andHudMode:MBProgressHUDModeIndeterminate andDisplayButton:NO];
-    [self.progressHud show:YES];
-}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"carBeaconDetected"]){
@@ -127,5 +118,63 @@
         }
     }
 }
+
+- (void) makeCarRun{
+    [CATransaction begin];
+    self.searchingCarLabel.text = kCarFoundLabel;
+    [self createAnimationForCarImage:kAnimatingScannerBeaconFoundColor];
+    CGSize deviceSize = [LSCDeviceDetails getDimensionsOfDevice];
+    CGPoint point0 = self.findMyCarImage.layer.position;
+    CGPoint point1 = { deviceSize.width+self.findMyCarImage.image.size.width + 20, point0.y };
+    
+    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"position.x"];
+    anim.fromValue    = @(point0.x);
+    anim.toValue  = @(point1.x);
+    anim.duration   = 1.5f;
+    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    self.findMyCarImage.layer.position = point1;
+    [CATransaction setCompletionBlock:^{
+        [self.beaconDetectionManager stopSearchingForBeacons];
+        [self performSegueWithIdentifier:@"carBeaconDetected" sender:self];
+    }];
+    [self.findMyCarImage.layer  addAnimation:anim forKey:@"position.x"];
+    [CATransaction commit];
+}
+
+- (void) createAnimationForCarImage:(NSString *)animatedColor{
+    if(self.pulseView){
+        [self.pulseView removeFromSuperview];
+    }
+    CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    scaleAnimation.fromValue = [NSNumber numberWithFloat:0.0];
+    scaleAnimation.toValue = [NSNumber numberWithFloat:1.0];
+    
+    CABasicAnimation *opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    opacityAnimation.fromValue = [NSNumber numberWithFloat:1.0];
+    opacityAnimation.toValue = [NSNumber numberWithFloat:0.0];
+    
+    CAAnimationGroup *beaconAnimations = [CAAnimationGroup animation];
+    [beaconAnimations setAnimations:[NSArray arrayWithObjects:opacityAnimation,scaleAnimation,nil]];
+    [beaconAnimations setRemovedOnCompletion:YES];
+    [beaconAnimations setFillMode:kCAFillModeForwards];
+    beaconAnimations.repeatCount = HUGE_VAL;
+    
+    self.pulseView = [[UIView alloc] initWithFrame:CGRectMake(-10,-20, 80, 80)];
+    self.pulseView.layer.cornerRadius = 40;
+    beaconAnimations.duration = 1.3;
+    
+    self.pulseView.backgroundColor = [UIColor colorFromHexCode:animatedColor];
+    self.pulseView.alpha = 0.5;
+    self.pulseView.tag = 1;
+    self.pulseView.userInteractionEnabled = YES;
+    
+    [self.pulseView.layer addAnimation:beaconAnimations forKey:@"scale"];
+    [self.findMyCarImage addSubview:self.pulseView];
+}
+
+- (IBAction)selectFromListClicked:(id)sender {
+    [self.beaconDetectionManager stopSearchingForBeacons];
+}
+
 
 @end

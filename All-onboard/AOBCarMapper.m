@@ -7,6 +7,7 @@
 //
 
 #import "AOBCarMapper.h"
+#import "AOBImageEntityMapper.h"
 
 @implementation AOBCarMapper
 
@@ -89,6 +90,7 @@
     entity.layout = [AOBBaseMapper getValueOfField:[properties objectForKey:@"layout"] andAssigningField:entity.layout];
     entity.fuel_type = [AOBBaseMapper getValueOfField:[properties objectForKey:@"fuel_type"] andAssigningField:entity.fuel_type];
     entity.gearing = [AOBBaseMapper getValueOfField:[properties objectForKey:@"gearing"] andAssigningField:entity.gearing];
+    entity.carImage = [AOBImageEntityMapper generateImage:[properties objectForKey:@"photo_url"]];
 }
 
 
