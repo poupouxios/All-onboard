@@ -2,8 +2,8 @@
 Hack Manchester App 2015. I built the iOS app where my other 2 collegaues prepared the back end API in Elixir Phoenix Framework. The app was on the 3 finalists of rentalcars.com and on the 3 finalists of The Barclays/Rise Challenge. We won the competition of The The Barclays/Rise Challenge - Create the best use of beacons for the Rise community.
 
 You can see the results as below:
-  - https://youtu.be/GQMArbvMKh8?t=3095 we are on the final 3 for rentalcars.com
-  - https://youtu.be/GQMArbvMKh8?t=3851 we are again on final 3 and win the big prizes
+  - https://youtu.be/YvBy7DBaesk?t=1247 we are on the final 3 for rentalcars.com
+  - https://youtu.be/YvBy7DBaesk?t=2188 we are again on final 3 and win the big prizes
 
 # Description
 
