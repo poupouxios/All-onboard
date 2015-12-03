@@ -24,4 +24,7 @@ To run the app you need to :
 
 You can have a preview of the app on this link https://www.youtube.com/watch?v=azep6YQy2Io
 
-Thanks :)
+## License
+
+This project is licensed under the MIT open source license.
+
